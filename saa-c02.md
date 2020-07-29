@@ -24,7 +24,27 @@ E. MySQL-compatible Amazon Aurora
 bc
 ```
 
-
+QUESTION 2
+```
+A solutions architect needs to design a managed storage solution for a company's application
+that includes high-performance machine learning,
+This application runs on AWS Fargate and the connected storage needs to have concurrent
+access to files and deliver high performance.
+Which storage option should the solutions architect recommend?
+A. Create an Amazon S3 bucket for the application and establish an IAM role for Fargate to
+communicate with Amazon S3.
+B. Create an Amazon FSx for Lustre file share and establish an IAM role that allows Fargate to
+communicate with FSx for Lustre.
+. Create an Amazon Elastic File System (Amazon EFS) file share and establish an IAM role that
+allows Fargate to communicate with Amazon EFS.
+D. Create an Amazon Elastic Block Store (Amazon EBS) volume for the application and establish an
+IAM role that allows Fargate to communicate with Amazon EBS.
+Answer: B
+```
+Explanation:
+https://aws.amazon.com/efs/
+Keyword: Concurrent Access to files + Deliver High Performance
+Amazon FSx .
 
 
 
