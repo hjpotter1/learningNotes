@@ -45,6 +45,23 @@ Explanation:
 https://aws.amazon.com/efs/
 Keyword: Concurrent Access to files + Deliver High Performance
 Amazon FSx .
+A high-performance file system optimized for fast processing of workloads. Lustre is a popular
+open-source parallel file system.
+Also supports concurrent access to the same file or directory from thousands of compute
+instances.
+Amazon IAM with FSx .
+. Amazon FSx is integrated with AWS ldentity and Access Management (IAM).
+. This integration means that you can control the actions your AWS IAM users and groups can
+take to manage your file systems (such as creating and deleting file systems).
+. You can also tag your Amazon FSx resources and control the actions that your IAM users and
+groups can take based on those tags.
+Fargate Launch Type - So, Answer C & D Ruled-out as per Neal David
+* Fargate automatically provisions resources
+· Fargate provisions and manages compute
+· Charged for running tasks
+" No EFS and EBS integration
+· Fargate handles cluster optimization
+· Limited control, infrastructure is automated
 
 
 
