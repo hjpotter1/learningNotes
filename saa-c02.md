@@ -5378,10 +5378,11 @@ Unlike traditional systems which can require laborious data verification and man
 performs regular, systematic data integrity checks, and is built to be automatically self-healing.
 Reference: http://d0.awsstatic. com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf
 
-QUESTION 116
+##### QUESTION 116
 Your EBS volumes do not seem to be performing as expected and your team leader has
 requested you look into improving their performance. Which of the following is not a true
 statement relating to the performance of your EBS volumes?
+
 A. Frequent snapshots provide a higher level of data durability and they will not degrade the
 performance of your application while the snapshot is in progress.
 B. General Purpose (SSD) and Provisioned IOPS (SSD) volumes have a throughput limit of 128
@@ -5391,6 +5392,7 @@ I/O you are driving to them, and the amount of time it takes for each transactio
 D. There is a 5 to 50 percent reduction in IOPS when you first access each block of data on a newly
 created or restored EBS volume
 Answer: A
+
 Explanation:
 Several factors can affect the performance of Amazon EBS volumes, such as instance
 configuration, I/O characteristics, workload demand, and storage configuration. Frequent
