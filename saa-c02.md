@@ -2749,7 +2749,10 @@ malicious IP address
 D. Modify the security groups for the EC2 instances in the target groups behind the ALB to deny the
 malicious IP address
 Answer: B
-公司的网站用于向公众销售产品。该站点在应用程序负载平衡器（ALB）后面的Auto Scaling组中的Amazon EC2实例上运行。还有一个Amazon CloudFront发行版，AWS WAF被用来防御SQL注入攻击。 ALB是CloudFront分发的来源。 最近对安全日志的审查显示，需要阻止外部恶意IP访问该网站。解决方案架构师应该怎么做才能保护应用程序？ A.修改CloudFront分发上的网络ACL以添加针对恶意IP地址的拒绝规则B.修改AWS WAF的配置以添加IP匹配条件以阻止恶意IP地址C.修改EC2实例的网络ACL在ALB后面的目标组中拒绝恶意IP地址D。在ALB后面的目标组中修改EC2实例的安全组以拒绝恶意IP地址
+公司的网站用于向公众销售产品。该站点在应用程序负载平衡器（ALB）后面的Auto Scaling组中的Amazon EC2实例上运行。还有一个Amazon CloudFront发行版，AWS WAF被用来防御SQL注入攻击。 
+ALB是CloudFront分发的来源。 最近对安全日志的审查显示，需要阻止外部恶意IP访问该网站。解决方案架构师应该怎么做才能保护应用程序？
+A.修改CloudFront分发上的网络ACL以添加针对恶意IP地址的拒绝规则B.修改AWS WAF的配置以添加IP匹配条件以阻止恶意IP地址
+C.修改EC2实例的网络ACL在ALB后面的目标组中拒绝恶意IP地址D。在ALB后面的目标组中修改EC2实例的安全组以拒绝恶意IP地址
 ```
 
 Explanation:
@@ -2770,9 +2773,8 @@ C. Associate an IAM role with least privilege permissions to the EC2 instance pr
 D. Store AWS credentials directly on the EC2 instance for applications on the instance to use for API
 calls
 Answer: C
-一家营销公司将CSV文件存储在Amazon S3存储桶中，以进行统计分析。 Amazon EC2实例上的应用程序需要权限才能有效处理S3存储桶中存储的CSV数据。 MOST将安全地授予EC2实例对S3存储桶的访问权限是什么？ A.将基于资源的策略附加到S3存储桶B.为具有S3存储桶特定权限的应用程序创建IAM用户C.将IAM角色与对EC2实例配置文件的最小特权权限相关联D.将AWS凭证直接存储在EC2实例，该实例上的应用程序可用于API调用
 ```
-
+一家营销公司将CSV文件存储在Amazon S3存储桶中，以进行统计分析。 Amazon EC2实例上的应用程序需要权限才能有效处理S3存储桶中存储的CSV数据。 MOST将安全地授予EC2实例对S3存储桶的访问权限是什么？ A.将基于资源的策略附加到S3存储桶B.为具有S3存储桶特定权限的应用程序创建IAM用户C.将IAM角色与对EC2实例配置文件的最小特权权限相关联D.将AWS凭证直接存储在EC2实例，该实例上的应用程序可用于API调用
 Explanation:
 Keyword: Privilege Permission + IAM Role
 AWS ldentity and Access Management (IAM) enables you to manage access to AWS services
