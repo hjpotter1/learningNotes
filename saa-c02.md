@@ -2289,7 +2289,6 @@ Answer: C
 ```
 
 
-
 Explanation:
 Amazon RDS uses snapshots for backup. Snapshots are encrypted when created only if the
 database is encrypted and you can only select encryption for the database when you first create
@@ -2323,7 +2322,6 @@ C.使用Amazon CloudWatch Events解析日志
 D.使用AWS OpsWorks来管理其资源
 答案：B
 ```
-
 
 
 说明：
@@ -2531,12 +2529,10 @@ D.将日志保存在Amazon EBS卷中，并每月拍摄一次快照。
 ```
 
 
-
 Explanation:
 Amazon Glacier, which enables long-term storage of mission-critical data, has added Vault Lock.
 This new feature allows you to lock your vault with a variety of compliance controls that are
 designed to support such long-term records retention.
-
 
 
 说明：
@@ -2571,7 +2567,6 @@ D.AWS PrivateLink
 
 Answer: D
 ```
-
 
 
 Explanation:
@@ -2656,7 +2651,6 @@ E.使用内联策略文档将所需权限应用于根用户Explanation:
 ```
 
 
-
 "Enable MFA"
 The AWS Account Root User - https://docs .aws,amazon.com/lAM/atest/UserGuide/id_ root-
 user.html
@@ -2716,7 +2710,6 @@ Answer: B
 ```
 
 
-
 Explanation:
 Amazon FSx for Windows File Server provides fully managed, highly reliable file storage that is
 accessible over the industry-standard Server Message Block (SMB) protocol.
@@ -2749,10 +2742,7 @@ malicious IP address
 D. Modify the security groups for the EC2 instances in the target groups behind the ALB to deny the
 malicious IP address
 Answer: B
-公司的网站用于向公众销售产品。该站点在应用程序负载平衡器（ALB）后面的Auto Scaling组中的Amazon EC2实例上运行。还有一个Amazon CloudFront发行版，AWS WAF被用来防御SQL注入攻击。 
-ALB是CloudFront分发的来源。 最近对安全日志的审查显示，需要阻止外部恶意IP访问该网站。解决方案架构师应该怎么做才能保护应用程序？
-A.修改CloudFront分发上的网络ACL以添加针对恶意IP地址的拒绝规则B.修改AWS WAF的配置以添加IP匹配条件以阻止恶意IP地址
-C.修改EC2实例的网络ACL在ALB后面的目标组中拒绝恶意IP地址D。在ALB后面的目标组中修改EC2实例的安全组以拒绝恶意IP地址
+公司的网站用于向公众销售产品。该站点在应用程序负载平衡器（ALB）后面的Auto Scaling组中的Amazon EC2实例上运行。还有一个Amazon CloudFront发行版，AWS WAF被用来防御SQL注入攻击。 ALB是CloudFront分发的来源。 最近对安全日志的审查显示，需要阻止外部恶意IP访问该网站。解决方案架构师应该怎么做才能保护应用程序？ A.修改CloudFront分发上的网络ACL以添加针对恶意IP地址的拒绝规则B.修改AWS WAF的配置以添加IP匹配条件以阻止恶意IP地址C.修改EC2实例的网络ACL在ALB后面的目标组中拒绝恶意IP地址D。在ALB后面的目标组中修改EC2实例的安全组以拒绝恶意IP地址
 ```
 
 Explanation:
@@ -2773,8 +2763,9 @@ C. Associate an IAM role with least privilege permissions to the EC2 instance pr
 D. Store AWS credentials directly on the EC2 instance for applications on the instance to use for API
 calls
 Answer: C
-```
 一家营销公司将CSV文件存储在Amazon S3存储桶中，以进行统计分析。 Amazon EC2实例上的应用程序需要权限才能有效处理S3存储桶中存储的CSV数据。 MOST将安全地授予EC2实例对S3存储桶的访问权限是什么？ A.将基于资源的策略附加到S3存储桶B.为具有S3存储桶特定权限的应用程序创建IAM用户C.将IAM角色与对EC2实例配置文件的最小特权权限相关联D.将AWS凭证直接存储在EC2实例，该实例上的应用程序可用于API调用
+```
+
 Explanation:
 Keyword: Privilege Permission + IAM Role
 AWS ldentity and Access Management (IAM) enables you to manage access to AWS services
@@ -2999,7 +2990,6 @@ Answer: D
 ```
 
 
-
 Explanation:
 Service control policies (SCPs) offer central control over the maximum available permissions for
 all accounts in your organization, allowing you to ensure your accounts stay within your
@@ -3037,7 +3027,6 @@ D. You've reached your volume limit.
 Answer: C
 您正在尝试启动EC2实例，但是该实例似乎立即进入终止状态。发生这种情况的原因可能不是什么原因？答：AMI缺少必需的部分。 B.快照已损坏。 C.您需要首先在EBS中创建存储。 D.您已达到音量限制
 ```
-
 
 
 Explanation:
@@ -3093,7 +3082,6 @@ Answer: A
 ```
 
 
-
 Explanation:
 Amazon ECS contains the following components:
 A Cluster is a logical grouping of container instances that you can place tasks on. A Container
@@ -3144,7 +3132,6 @@ D. No
 Answer: C
 用户是否可以收到有关每个实例的通知，该实例从1开始配置为Auto Scaling终止？ A.是，如果配置了启动配置B.是，始终是C.是，如果配置了Auto Scaling组D.否
 ```
-
 
 
 Explanation:
@@ -3207,7 +3194,6 @@ D. All answers listed are a reasonable response to his question
 Answer: D
 在向客户推荐Amazon Redshift作为支付数据仓库分析其数据的替代解决方案之后，您的客户会要求您解释为什么推荐Redshift。以下哪项是对他的要求的合理回应？答：随着数据和查询复杂性的增长，它具有大规模的高性能。 B.它可以防止报告和分析处理干扰OLTP工作负载的性能。 C.您没有运行自己的数据仓库以及处理设置，持久性，监视，扩展和修补的管理负担。 D.列出的所有答案都是对他问题的合理回答
 ```
-
 
 
 Explanation:
@@ -3322,7 +3308,6 @@ Answer: A
 ```
 
 
-
 Explanation:
 Amazon CloudFront is a content delivery network (CDN) that improves website performance by
 caching content at edge locations around the world. It can serve both dynamic and static content.
@@ -3422,7 +3407,6 @@ Answer: B
 ```
 
 
-
 Explanation:
 
 AWS Auto Scaling monitors your applications and automatically adjusts capacity to maintain
@@ -3494,7 +3478,6 @@ Answer: D
 ```
 
 
-
 Explanation:
 这里的问题是读取查询从澳大利亚指向英国的延迟，这是很大的物理距离。需要一种解决方案来提高澳大利亚的读取性能。一个Aurora全局数据库由一个主要的AWS区域（用于管理您的数据）和最多五个只读的次要AWS区域组成。 Aurora以典型的延迟不到一秒的时间将数据复制到辅助AWS区域。您直接向主要AWS Regio中的主要数据库实例发出写入操作
 
@@ -3516,7 +3499,6 @@ Create a lifecycle policy to transition the S3 objects to Amazon S3 Glacier.
 Answer: D
 解决方案架构师的任务是将750 TB的数据从分支机构的网络连接文件系统传输到Amazon S3 Glacier。解决方案必须避免使分支机构的低带宽Internet连接饱和。什么是最具成本效益的解决方案1？ A.创建到Amazon S3存储桶的站点到站点VPN隧道，然后直接传输文件。创建存储桶策略以强制执行VPC端点。 B.订购10台AWS Snowball设备，然后选择一个S3 Glacier保管库作为目的地。创建存储桶策略以强制执行VPC端点。 C.将网络连接的文件系统安装到Amazon S3并直接复制文件。创建生命周期策略以将S3对象过渡到Amazon S3 Glacier。 D.订购10台AWS Snowball设备，然后选择一个Amazon S3存储桶作为目的地。创建生命周期策略以将S3对象过渡到Amazon S3 Glacier。
 ```
-
 
 
 Explanation:As the company's internet link is low-bandwidth uploading directly to Amazon S3 (ready for
@@ -3545,7 +3527,6 @@ Create a second Single-AZ RDS Read Replica from the replica.
 Answer: B
 公司的生产应用程序在Amazon RDS MySQL数据库实例上运行在线事务处理（OLTP）事务。该公司正在启动一种新的报告工具，该工具将访问相同的数据。报告工具必须具有高可用性，并且不影响生产应用程序的性能。如何实现？ A.创建生产RDS数据库实例的每小时快照。 B.创建生产RDS数据库实例的多可用区RDS只读副本。 C.创建生产RDS数据库实例的多个RDS只读副本。将只读副本放置在Auto Scaling组中。 D.创建生产RDS数据库实例的单可用区RDS只读副本。从副本创建第二个单可用区RDS只读副本
 ```
-
 
 
 Explanation:
@@ -3684,7 +3665,6 @@ Answer: A
 ```
 
 
-
 Explanation:
 Amazon RDS gives you access to the capabilities of a familiar MySQL, Oracle, SQL Server, or
 PostgreSQL database engine. This means that the code, applications, and tools you already use
@@ -3705,7 +3685,6 @@ D. This is true only for US regions.
 Answer: C
 是非题：VPC包含多个子网，其中每个子网可以跨越多个可用区。答：只有在设置VPC期间提出要求时，这才是正确的。 B.是真的。 C.这是错误的。 D.这仅适用于美国地区
 ```
-
 
 
 Explanation:
@@ -3849,7 +3828,6 @@ automatically.
 Answer: CE
 一家游戏公司的单个多人游戏在一个可用区中具有多个Amazon EC2实例，该实例与第4层上的用户进行通信。首席技术官（CTo）希望使该架构高度可用且具有成本效益。解决方案架构师应该怎么做才能满足这些要求？ （选择两个。）A.增加EC2实例的数量。 B.减少EC2实例的数量C.在EC2实例的前面配置网络负载平衡器。 D.在EC2实例之前配置应用程序负载平衡器E.配置一个Auto Scaling组以自动在多个可用区中添加或删除实例。
 ```
-
 
 
 Explanation:
@@ -4022,7 +4000,6 @@ C.当用户的源IP为10.100.100.254时，用户可以在us-east-1区域终止EC
 ```
 
 
-
 Explanation:
 What the policy means:
 
@@ -4071,7 +4048,6 @@ D. It is not defined
 Answer: A
 DynamoDB是否支持就地原子更新？ A.是B.否C.它确实支持就地非原子更新D.未定义
 ```
-
 
 
 Explanation:
@@ -4201,7 +4177,6 @@ A. Oracle导出/导入实用程序B. Oracle SQL Developer C. Oracle数据泵D. D
 ```
 
 
-
 Explanation:
 如何将数据导入Amazon RDS数据库实例取决于您拥有的数据量以及数据库中数据库对象的数量和种类。例如，您可以使用Oracle SQL Developer导入一个20 MB的简单数据库。您想要使用Oracle Data Pump导入复杂的数据库或大小为几百兆字节或几兆字节的数据库
 Reference:
@@ -4245,7 +4220,6 @@ D. It can Import to Amazon EBS
 Answer: C
 您需要将存储在硬盘上的大量数据迁移到云中，然后确定实现此目标的最佳方法是使用AWS Import / Export，然后将硬盘邮寄到AWS。关于AWS Import / Export，以下哪个陈述不正确？ A.可以从Amazon S3导出B。可以导入到Amazon GlacierC。可以从Amazon Glacier导出。 D.它可以导入到Amazon EBS
 ```
-
 
 
 Explanation:
@@ -4367,7 +4341,6 @@ Answer: B
 ```
 
 
-
 Explanation:
 By default, all AWS accounts are limited to 5 Elastic IP addresses per region for each AWS
 account, because public (IPv4) Internet addresses are a scarce public resource. AWS strongly
@@ -4400,7 +4373,6 @@ C.创建一个只读副本并修改应用程序以使用适当的端点
 D.创建第二个Amazon Aurora数据库并将其作为只读副本链接到主数据库。
 答案：C
 ```
-
 
 
 Explanation:
@@ -4476,7 +4448,6 @@ Answer: BE
 ```
 
 
-
 Explanation
 The architecture is already highly resilient but the may be subject to performance degradation if
 there are sudden increases in request rates. To resolve this situation Amazon Aurora Read
@@ -4509,7 +4480,6 @@ D. Amazon S3 Transfer Acceleration
 Answer: A
 解决方案架构师正在针对即将举行的音乐活动优化网站，将实时播放表演视频，然后按需提供。该活动有望吸引全球在线观众。哪种服务将同时改善实时流和点播流的性能？ A.Amazon CloudFront B.AWS Global Accelerator C.Amazon Route 53 D.Amazon S3传输加速
 ```
-
 
 
 Explanation:
@@ -4545,7 +4515,6 @@ countries
 Answer: C
 一家公司使用在AWS上运行的应用程序向其全球的订户提供内容。该应用程序在应用程序负载平衡器（ALB）后的专用子网中具有多个Amazon EC2'实例。由于版权限制的最新变化，首席信息官（CIO）希望阻止某些国家/地区的访问。哪些动作可以满足这些要求？ A.修改ALB安全组以拒绝来自阻止国家的传入流量修改EC2实例的安全组以拒绝来自阻止国家的传入流量C.使用Amazon CloudFront服务该应用程序并拒绝对阻止国家的访问D.使用ALB侦听器规则返回访问被拒绝对来自阻止国家的传入流量的响应
 ```
-
 
 
 Explanation:
@@ -4586,7 +4555,6 @@ Trigger an AWS Lambda function from the SQS queue to save data to Amazon S3.
 Answer: A
 一家制造公司希望对其机械设备实施预测性维护。该公司将安装数千个loT传感器，这些传感器会实时将数据发送到AWS。解决方案架构师的任务是实施一种解决方案，该解决方案将按顺序接收每个机械资产的事件，并确保保存数据以供以后进行进一步处理。哪种解决方案最有效？ A.使用Amazon Kinesis Data Streams进行实时事件，并为每个设备资产分配一个分区。使用Amazon Kinesis Data Firehose将数据保存到Amazon S3。 B.使用Amazon Kinesis Data Streams实时事件，并为每个设备资产分配一个碎片。使用Amazon Kinesis Data Firehose将数据保存到Amazon EBS。 C.将Amazon SQS FIFO队列用于实时事件，每个设备资产都有一个队列。触发SQS队列的AWS Lambda函数，以将数据保存到Amazon EFS。 D.使用Amazon SQS标准队列处理实时事件，每个设备资产使用一个队列。从SQS队列触发AWS Lambda函数以将数据保存到Amazon S3。
 ```
-
 
 
 Explanation:
@@ -4637,7 +4605,6 @@ Answer: AD
 
 
 
-
 Explanation:
 通过PrivateLink，可以轻松地跨不同帐户和VPC连接服务，从而显着简化网络架构
 https://www.levvel.io/resource-library/aws-api-gateway-for-multi-account ·architecture
@@ -4656,7 +4623,6 @@ Answer: D
 在Amazon EC2中，通过将部分段组合成完整小时
 A.每小时使用小时B.每分钟使用C.通过将部分分段合并为完整小时D.作为完整小时
 ```
-
 
 
 Explanation:
@@ -4683,7 +4649,6 @@ B.数据保留在实例存储中。
 C.数据部分存在于实例存储中。
 D.实例存储中的数据将丢失。
 ```
-
 
 
 Explanation:
@@ -4777,7 +4742,6 @@ Answer: B
 ```
 
 
-
 Explanation:
 The endpoint is the URL that serves as the entry point for the web service,
 Reference: http://docs. amazonwebservices.com/AWSEC2/latest/UserGuide/using-query-api.html
@@ -4797,7 +4761,6 @@ D. NDB CLUSTER Storage
 Answer: C
 您被要求使用Amazon Redshift构建数据库仓库。您了解它，包括它是SQL数据仓库解决方案，并使用行业标准的ODBC和JDBC连接以及PostgreSQL驱动程序。但是，您不确定它用于数据库表的存储类型。 Amazon Redshift对数据库表使用哪种存储方式？ A.InnoDB表B.NDB数据存储C.列数据存储D.NDB集群存储
 ```
-
 
 
 Explanation: 
@@ -4877,7 +4840,6 @@ D. AWS Elastic Beanstalk , Amazon CloudWatch and Elastic Load Balancing.
 Answer: B
 您已经获得了为大型组织部署一些AWS基础设施的范围。要求是您将有很多EC2实例，但是当Amazon EC2队列的平均利用率较高时，可能需要添加更多实例；相反，在CPU利用率较低时，则将它们删除。最好使用哪种AWS服务来完成此任务？ A. Auto Scaling，Amazon CloudWatch和AWS Elastic Beanstalk B.Auto Scaling，Amazon CloudWatch和Elastic Load Balancing C. Amazon CloudFront，Amazon CloudWatch和弹性负载平衡。 D.AWS Elastic Beanstalk，Amazon CloudWatch和Elastic Load Balancing
 ```
-
 
 
 Explanation:
@@ -5020,7 +4982,6 @@ Web应用程序部署在AWS Cloud中，它由两层体系结构组成，该体�
 ```
 
 
-
 Explanation:
 The AWS Web Application Firewall (WAF) is available on the Application Load Balancer (ALB).
 You can use AWS WAF directly on Application Load Balancers (both internal and external) in a
@@ -5078,7 +5039,6 @@ Answer: C
 ````
 
 
-
 Explanation:
 “每个应用程序都有大约50 TB的数据要传输” = AWS Snowball； “安全从数据中心到应用程序的吞吐量始终保持一致的网络连接”
 使用AWS Direct Connect和专用网络连接有什么好处？ 在许多在这种情况下，专用网络连接可以降低成本，增加带宽并提供比基于Internet的连接更一致的网络体验，“更一致的网络经验”，因此是AWS Direct Connect。
@@ -5099,7 +5059,6 @@ D. Use Amazon CloudFront with the S3 bucket as its origin
 Answer: D
 全球活动的组织者希望将每日报告作为静态HTML页面进行在线发布。这些页面有望产生来自全球用户的数百万个视图。文件存储在Amazon S3存储桶中。解决方案架构师已被要求设计一个有效的解决方案。解决方案架构师应采取什么行动来完成此任务？ A.为文件生成预签名URL B.对所有区域使用跨区域复制使用Amazon Route 53的geoproximity功能D.将Amazon CloudFront与S3存储桶作为源
 ```
-
 
 
 Explanation:
@@ -5140,7 +5099,6 @@ D. Amazon S3
 Answer: D
 一家公司在一组Amazon Linux EC2实例上运行一个应用程序，该应用程序使用标准API调用写入日志文件。出于合规性原因，必须无限期保留所有日志文件，并且将由必须同时访问所有文件的报告工具进行分析。解决方案架构师应使用哪种存储服务来提供最具成本效益的解决方案？ A.Amazon EBS B.Amazon EFS C.Amazon EC2实例存储D.Amazon S3
 ```
-
 
 
 Explanation:
@@ -5249,7 +5207,6 @@ D. Amazon S3 One Zone-Infrequent Access (S3 One Zone-lA)
 Answer: B
 据科学团队需要存储以进行每晚日志处理。日志的大小和数量是未知的，并将仅保留24小时。什么是最具成本效益的解决方案？ A.Amazon S3 Glacier B.Amazon S3标准 C.Amazon S3智能分层D.Amazon S3一区不频繁访问（S3一区lA）
 ```
-
 
 
 Explanation:
@@ -5367,7 +5324,6 @@ Answer: C
 ```
 
 
-
 Explanation:
 Like Amazon S3, the Amazon Glacier service provides low-cost, secure, and durable storage. But
 where S3 is designed for rapid retrieval, Glacier is meant to be used as an archival service for
@@ -5381,6 +5337,8 @@ performs regular, systematic data integrity checks, and is built to be automatic
 Reference: http://d0.awsstatic. com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf
 
 ##### QUESTION 116
+
+```
 Your EBS volumes do not seem to be performing as expected and your team leader has
 requested you look into improving their performance. Which of the following is not a true
 statement relating to the performance of your EBS volumes?
@@ -5395,6 +5353,21 @@ D. There is a 5 to 50 percent reduction in IOPS when you first access each block
 created or restored EBS volume
 Answer: A
 
+您的EBS量似乎表现不理想，而您的团队负责人
+要求您研究改善其性能。 以下哪项是不正确的
+有关您的EBS卷性能的声明？
+答：频繁快照可提供更高级别的数据持久性，并且不会降低快照质量。
+快照进行过程中应用程序的性能。
+B.通用（SSD）和预配置IOPS（SSD）卷的吞吐量限制为128
+每卷MB / s。
+C.您的EBS卷的最大性能与
+您正在驱动他们的I / O，以及完成每个事务所花费的时间。
+D.当您第一次访问新的数据块时，IOPS降低了5％到50％
+创建或还原的EBS卷
+```
+
+
+
 Explanation:
 Several factors can affect the performance of Amazon EBS volumes, such as instance
 configuration, I/O characteristics, workload demand, and storage configuration. Frequent
@@ -5404,17 +5377,34 @@ have data that changes rapidly. Whenever possible, plan for snapshots to occur d
 times in order to minimize workload impact.
 Reference: http://docs .aws..amazon.com/AWSEC2/latest/UserGuide/EBSPerformance ,html
 
-QUESTION 117
+##### QUESTION 117
+
+```
 You've created your first load balancer and have registered your EC2 instances with the load
 balancer. Elastic Load Balancing routinely performs health checks on all the registered EC2
 instances and automatically distributes all incoming requests to the DNS name of your load
 balancer across your registered, healthy EC2 instances. By default, the load balancer uses the
 _protocol for checking the health of your instances.
+
 A. HTTPS
 B. HTTP
 C. ICMP
 D. lPv6
 Answer: B
+您已经创建了第一个负载均衡器，并已向负载注册了EC2实例。
+平衡器。 Elastic Load Balancing定期对所有已注册的EC2执行运行状况检查
+实例并自动将所有传入请求分发到您的负载的DNS名称
+您已注册的健康EC2实例之间的平衡器。 默认情况下，负载均衡器使用
+_protocol，用于检查实例的运行状况。
+
+A.HTTPS
+B.HTTP
+C.ICMP
+D.pv6
+```
+
+
+
 Explanation:
 In Elastic Load Balancing a health configuration uses information such as protocol, ping port, ping
 path (URL), response timeout period, and health check interval to determine the health state of
@@ -5424,7 +5414,9 @@ Reference:
 http://docs. .aws. amazon.com/ElasticLoadBalancinglatest/DeveloperGuide/TerminologyandKeyCo
 ncepts.html
 
-QUESTION 118
+##### QUESTION 118
+
+```
 A major finance organisation has engaged your company to set up a large data mining
 application. Using AWS you decide the best service for this is Amazon Elastic MapReduce(EMR)
 which you know uses Hadoop. Which of the following statements best describes Hadoop?
@@ -5433,6 +5425,17 @@ B. Hadoop is an open source python web framework
 C. Hadoop is an open source Java software framework
 D. Hadoop is an open source javascript framework
 Answer: C
+一家大型财务组织已聘请您的公司来建立大数据挖掘
+应用。 使用AWS可以确定最适合此服务的服务是Amazon Elastic MapReduce（EMR）
+您知道使用Hadoop。 以下哪个语句最能描述Hadoop？
+A. Hadoop是可以使用AMI安装的第三方软件
+B. Hadoop是一个开源python Web框架
+C. Hadoop是一个开源Java软件框架
+D. Hadoop是一个开源javascript框架
+答案：C
+```
+
+
 Explanation:
 Amazon EMR uses Apache Hadoop as its distributed data processing engine. Hadoop is an open
 source, Java software framework that supports data-intensive distributed applications running on
@@ -5444,19 +5447,31 @@ be a reliable software platform for processing up to petabytes of data on cluste
 commodity machines.
 Reference: http://aws ,amazon.com/elasticmapreduce/faqs/
 
-QUESTION 119
+##### QUESTION 119
+
+```
 In Amazon EC2 Container Service, are other container types supported?
 A. Yes, EC2 Container Service supports any container service you need.
 b Yes, EC2 Container Service also supports Microsoft container service.
 C. No, Docker is the only container platform supported by EC2 Container Service presently,
 D. Yes, EC2 Container Service supports Microsoft container service and Openstack.
 Answer: C
+在Amazon EC2容器服务中，是否支持其他容器类型？
+答：是的，EC2容器服务支持您需要的任何容器服务。
+b是，EC2容器服务还支持Microsoft容器服务。
+C.不，Docker是目前EC2 Container Service支持的唯一容器平台，
+D.是的，EC2 Container Service支持Microsoft容器服务和Openstack。
+答案：C
+```
+
 Explanation:
 In Amazon EC2 Container Service, Docker is the only container platform supported by EC2
 Container Service presently.
 Reference: http://aws. amazon.com/ecs/faqs/
 
-QUESTION 120
+##### QUESTION 120
+
+```
 A Solutions Architect is designing the architecture for a web application that will be hosted on
 AWS. Internet users will access the application using HTTP and HTTPS.
 How should the Architect design the traffic control requirements?
@@ -5467,8 +5482,23 @@ and outbound.
 C. Allow inbound ports for HTTP and HTTPS in the security group used by the web servers.
 D. Allow outbound ports for HTTP and HTTPS in the security group used by the web servers.
 Answer: C
+解决方案架构师正在设计将在以下位置托管的Web应用程序的体系结构
+AWS。 Internet用户将使用HTTP和HTTPS访问该应用程序。
+架构师应如何设计交通控制要求？
+A.使用网络ACL允许HTTP和HTTPS的出站端口，拒绝入站的其他流量
+和出站。
+B.使用网络ACL允许HTTP和HT TPS的入站端口。 拒绝入站的其他流量
+和出站。
+C.在Web服务器使用的安全组中允许HTTP和HTTPS的入站端口。
+D.在Web服务器使用的安全组中允许HTTP和HTTPS的出站端口。
+答案：C
+```
 
-QUESTION 121
+
+
+##### QUESTION 121
+
+```
 A solutions architect is designing a system to analyze the performance of financial markets while
 the markets are closed.
 The system will run a series of compute-intensive jobs for 4 hours every night.
@@ -5481,6 +5511,20 @@ B. On-Demand Instances
 C. Standard Reserved Instances
 D. Scheduled Reserved Instances
 Answer: D
+解决方案架构师正在设计一个系统来分析金融市场的表现，同时
+市场关闭。
+该系统每晚将运行一系列计算密集型作业，持续4小时。
+预计完成计算作业的时间将保持不变，并且作业不能
+一旦开始中断。
+一旦完成，该系统预计将运行至少一年。
+应该使用哪种类型的Amazon EC2实例来降低系统成本？
+A.竞价型实例
+B.按需实例
+C.标准预留实例
+D.预定的预留实例
+```
+
+
 
 Explanation:
 Scheduled Reserved Instances (Scheduled Instances) enable you to purchase capacity
@@ -5491,7 +5535,8 @@ not use them.
 Scheduled Instances are a good choice for workloads that do not run continuously, but do run on
 a regular schedule. For example, you can use Scheduled Instances for an application that runs
 during business hours or for batch processing that runs at the end of the week.
-CORRECT: "Scheduled Reserved Instances" is the correct answer.
+
+通过计划的预留实例（计划的实例），您可以购买以一年，一天，每周或每月为基础的，具有指定的开始时间和持续时间的容量预留。您可以预先预留容量，以便知道在需要时可用。您为实例安排了时间，即使您不使用它们也要付费。对于不是连续运行但会定期运行的工作负载，计划实例是不错的选择。例如，您可以将“调度实例”用于在工作时间运行的应用程序或在周末运行的批处理。CORRECT: "Scheduled Reserved Instances" is the correct answer.
 INCORRECT: "Standard Reserved Instances" is incorrect as the workload only runs for 4 hours a
 day this would be more expensive.
 INCORRECT: "On-Demand Instances" is incorrect as this would be much more expensive as
@@ -5505,7 +5550,9 @@ Save time with our exam-specific cheat sheets:
 https://digitalcloud .training/certification-training/aws-solutions-architect-
 associate/compute/amazon-ec2/
 
-QUESTION 122
+##### QUESTION 122
+
+```
 A company hosts a static website on-premises and wants to migrate the website to AWS.
 The website should load as quickly as possible for users around the world.
 The company also wants the most cost- effective solution.
@@ -5519,11 +5566,30 @@ Configure Amazon CloudFront with the S3 bucket as the origin
 c. Copy the website content to an Amazon EBS-backed.
 Amazon EC2 instance running Apache HTTP Server.
 Configure Amazon Route 53 geolocation routing policies to select the closest origin
-
 D. Copy the website content to multiple Amazon EBS-backed.
 Amazon EC2 instances running Apache HTTP Server in multiple AWS Regions.
 Configure Amazon CloudFront geolocation routing policies to select the closest origin
 Answer: B
+一家公司在本地托管一个静态网站，并希望将该网站迁移到AWS。
+该网站应尽快为世界各地的用户加载。
+该公司还希望获得最具成本效益的解决方案。
+解决方案架构师应该怎么做才能做到这一点？
+A.将网站内容复制到Amazon S3存储桶。
+配置存储桶以提供静态网页内容。
+将S3存储桶复制到多个AWS区域
+B.将网站内容复制到Amazon S3存储桶。
+配置存储桶以提供静态网页内容。
+以S3存储桶为源配置Amazon CloudFront
+C。将网站内容复制到Amazon EBS支持的网站。
+运行Apache HTTP Server的Amazon EC2实例。
+配置Amazon Route 53地理位置路由策略以选择最接近的来源
+D.将网站内容复制到多个由Amazon EBS支持的网站。
+在多个AWS区域中运行Apache HTTP Server的Amazon EC2实例。
+配置Amazon CloudFront地理位置路由策略以选择最接近的来源
+答案：B
+```
+
+
 
 Explanation:
 The most cost-effective option is to migrate the website to an Amazon S3 bucket and configure
@@ -5552,7 +5618,9 @@ https://digitalcloud.training/certification-training/aws-solutions architect-
 associate/storage/amazon-s3/ https://digitalcloud .training/certification-training/aws-solutions-
 architect-associate/networking-and-content-delivery/amazon-cloudfron/
 
-QUESTION 123
+##### QUESTION 123
+
+```
 A solutions architect is implementing a document review application using an Amazon S3 bucket
 for storage.
 The solution must prevent accidental deletion of the documents and ensure that all versions of
@@ -5566,6 +5634,19 @@ D. Enable MFA Delete on the bucket
 E. Encrypt the bucket using AWS KMS
 
 Answer: BD
+解决方案架构师正在使用Amazon S3存储桶实施文档审阅应用程序
+用于存储。
+解决方案必须防止意外删除文档，并确保所有版本的
+这些文件可用。
+用户必须能够下载，修改和上传文档。
+应该采取哪些行动组合才能满足这些要求？ （选择两个）
+答：启用读取。 唯一存储桶ACL
+B.在存储桶上启用版本控制
+C.将IAM策略附加到存储桶
+D.在存储桶上启用MFA删除
+E.使用AWS KMS加密存储桶
+```
+
 Explanation:
 None of the options present a good solution for specifying permissions required to write and
 modify objects So that requirement needs to be taken care of separately. The other requirements
@@ -5573,6 +5654,8 @@ are to prevent accidental deletion and the ensure that all versions of the docum
 The two solutions for these requirements are versioning and MFA delete. Versioning will retain a
 copy of each version of the document and multi-factor authentication delete (MFA delete) will
 prevent any accidental deletion as you need to supply a second factor when attempting a delete.
+
+没有一个选项为指定编写和修改对象所需的权限提供了一个好的解决方案，因此需要单独处理该要求。其他要求是防止意外删除，并确保文档的所有版本均可用。满足这些要求的两个解决方案是版本控制和MFA删除。版本控制将保留文档每个版本的副本，并且多因素身份验证删除（MFA删除）将防止任何意外删除，因为您在尝试删除时需要提供第二个因素。
 
 CORRECT: "Enable versioning on the bucket" is a correct answer.
 CORRECT: "Enable MFA Delete on the bucket" is also a correct answer.
@@ -5590,7 +5673,9 @@ Save time with our exam-specific cheat sheets:
 https://digitalcloud. .training/certification-training/aws-solutions-architect-
 associate/storage/amazon-s3/
 
-QUESTION 124
+##### QUESTION 124
+
+```
 A company built a food ordering application that captures user data and stores it for future
 analysis.
 The application's static front end is deployed on an Amazon EC2 instance.
@@ -5613,6 +5698,30 @@ Gateway which writes the requests to an Amazon SQS queue,
 Place the backend instances in an Auto Scaling group and scale based on the queue depth to
 process and store the data in Amazon RDS
 Answer: D
+一家公司构建了一个食品订购应用程序，可以捕获用户数据并将其存储以备将来使用
+分析。
+应用程序的静态前端部署在Amazon EC2实例上。
+前端应用程序将请求发送到在单独的EC2上运行的后端应用程序
+实例。
+然后，后端应用程序将数据存储在Amazon RDS中
+解决方案架构师应该怎么做才能使架构脱钩并使其可扩展”
+A.使用Amazon S3来服务将请求发送到Amazon EC2的前端应用程序
+执行后端应用程序。
+后端应用程序将处理数据并将其存储在Amazon RDS中
+B.使用Amazon S3来服务前端应用程序并将请求写入Amazon Simple
+通知服务（Amazon SNS）主题。
+将Amazon EC2实例订阅到主题和过程的HTTP / HTTPS终端节点，以及
+将数据存储在Amazon RDS中
+C.使用EC2实例服务前端，并将请求写入Amazon SQS队列。
+将后端实例放置在Auto Scaling组中，然后根据队列深度进行扩展，以达到
+处理数据并将其存储在Amazon RDS中
+D.使用Amazon S3服务静态前端应用程序并将请求发送到Amazon API
+将请求写入Amazon SQS队列的网关，
+将后端实例放置在Auto Scaling组中，然后根据队列深度进行扩展，以达到
+处理数据并将其存储在Amazon RDS中
+```
+
+
 Explanation
 Keyword: Static + Decouple + Scalable
 Static=S3
@@ -5637,7 +5746,9 @@ associate/storage/amazon-s3/
 https://digitalcloud .training/certification-training/aws-solutions-aci
 associate/database/amazon-rds/
 
-QUESTION 125
+##### QUESTION 125
+
+```
 A Solutions Architect must design a web application that will be hosted on AWS, allowing users to
 purchase access to premium, shared content that is stored in an S3 bucket.
 Upon payment, content will be available for download for 14 days before the user is denied
@@ -5662,6 +5773,26 @@ URLs
 Design the application to set an expiration of 60 minutes for the URL and recreate the URL as
 necessary
 Answer: C
+解决方案架构师必须设计一个将托管在AWS上的Web应用程序，以便用户能够
+购买对存储在S3存储桶中的高级共享内容的访问权。
+付款后，可以在拒绝用户之前的14天内下载内容访问。
+以下哪一项是最简单的实现？
+A.使用具有原始访问身份（OAl）的Amazon CloudFront分配
+使用Amazon S3来源配置分发以通过签名提供对文件的访问
+网址设计Lambda函数以删除早于14天的数据
+b。使用S3存储桶并直接访问图块
+设计应用程序以在DynamoDH表中跟踪购买
+配置Lambda函数以根据查询删除超过14天的数据亚马逊DynamoDB
+c。将Amazon CloudFront分配与OAI一起使用
+使用Amazon S3来源配置分发以通过签名提供对文件的访问
+网址将应用程序设计为使URL过期14天
+d。将Amazon CloudFront分配与OAI一起使用
+使用Amazon S3来源配置分发以通过签名提供对文件的访问
+网址设计应用程序以将URL设置为60分钟的到期时间，然后将URL重新创建为
+必要
+```
+
+
 
 QUESTION 126
 A company wants to host a scalable web application on AWS.
@@ -5705,7 +5836,6 @@ Answer: DE
 ```
 
 
-
 https://d0.awsstatic.com/whitepapers/whitepaper- streaming-data- solutions-on-aws-with-
 amazonkinesis.pdf (9)
 https:/laws. amazon.com/kinesis/#Evolve_ _from_ ,batch_ to_ real-time_ _analytics
@@ -5718,7 +5848,9 @@ C和D大多在做类似的事情，获取流数据并传递到下一个流程，
 - **Kinesis Data Analytics**：使用SQL分析数据流
 - **Kinesis Data Streams (Kinesis Streams)**：使用自定义的应用程序分析数据流
 
-QUESTION 128
+##### QUESTION 128
+
+```
 A company is migrating a three-tier application to AWS.
 The application requires a MySQL database. In the past, the application users reported poor
 application performance when creating new entries.
@@ -5734,14 +5866,32 @@ Configure the application reader endpoint for reports.
 D. Create an Amazon Aurora MySQL Multi-AZ DB cluster.
 Configure the application to use the backup instance of the cluster as an endpoint for the reports.
 Answer: C
+一家公司正在将三层应用程序迁移到AWS。
+该应用程序需要一个MySQL数据库。 过去，应用程序用户报告的效果不佳
+创建新条目时的应用程序性能。
+这些性能问题是由用户从
+在工作时间内申请。
+哪种解决方案将在将应用程序移至AWS时可提高其性能？
+A.将数据导入具有预配置容量的Amazon DynamoDB表中。
+重构应用程序以使用DynamoDB生成报告。
+B.在经过计算优化的Amazon EC2实例上创建数据库。
+确保计算资源超出本地数据库。
+C.创建具有多个只读副本的Amazon Aurora MySQL Multi-AZ数据库集群。
+配置报告的应用程序阅读器端点。
+D.创建一个Amazon Aurora MySQL Multi-AZ数据库集群。
+配置应用程序以将群集的备份实例用作报告的端点。
+```
+
 Explanation:
 The MySQL-compatible edition of Aurora delivers up to 5X the throughput of standard MySQL
 running on the same hardware, and enables existing MySQL applications and tools to run without
 requiring modification.
 https://aws. .amazon.com/rds/aurora/mysql-features/
-QUESTION 129
-A star-up company has a web application based in the us-east-1 Region with multiple Amazon
 
+##### QUESTION 129
+
+```
+A star-up company has a web application based in the us-east-1 Region with multiple Amazon
 EC2 instances running behind an Application Load Balancer across multiple Availability Zones.
 As the company's user base grows in the us-west-1 Region, it needs a solution with low latency
 and high availability,
@@ -5757,6 +5907,23 @@ load balancer endpoints in both Regions.
 D. Provision EC2 instances and configure an Application Load Balancer in us-west-1.
 Configure Amazon Route 53 with a weighted routing policy,
 Create alias records in Route 53 that point to the Application Load Balancer.
+一家星空公司拥有一个基于us-east-1 Region的Web应用程序，其中包含多个Amazon
+在多个可用区中的Application Load Balancer后面运行的EC2实例。
+随着公司用户群在美国西部1地区的增长，它需要低延迟的解决方案
+和高可用性，
+解决方案架构师应该怎么做才能做到这一点？
+A.在us-west-1中配置EC2实例。
+将应用程序负载平衡器切换到网络负载平衡器以实现跨区域负载
+平衡。
+B.在us-west-1中配置EC2实例和一个Application Load Balancer。
+使负载均衡器根据请求的位置分配流量。
+C。在us-west-1中配置EC2实例并配置Application Load Balancer。
+在AWS Global Accelerator中创建一个加速器，该加速器使用包含以下内容的端点组：
+两个区域中的负载均衡器端点。
+D.设置EC2实例并在us-west-1中配置一个应用程序负载平衡器。
+使用加权路由策略配置Amazon Route 53，
+在Route 53中创建指向Application Load Balancer的别名记录。
+```
 
 Answer: C
 Explanation:
@@ -5769,7 +5936,13 @@ hosted in a single AWS Region and used by clients in and around the same Region,
 an Application Load Balancer or Network Load Balancer to manage your resources.'
 htts:/laws. amazon.com/global-accelerator/faqs/
 
-QUESTION 130
+ELB在一个区域内提供负载平衡，AWS Global Accelerator在多个区域之间提供流量管理[..] AWS Global Accelerator通过将这些功能扩展到单个AWS区域之外，对ELB进行了补充，允许您为任意数量的应用程序提供全局接口。地区。如果您有满足全球客户群的工作负载，我们建议您使用AWS Global Accelerator。如果您的工作负载托管在单个AWS区域中，并且由同一区域内及其周围的客户端使用，则可以使用Application Load Balancer或Network Load Balancer来管理资源。
+
+为端点组注册端点：在每个端点组中注册一个或多个区域资源，例如应用程序负载平衡器，网络负载平衡器，EC2实例或弹性IP地址。然后，您可以设置权重以选择路由到每个端点的流量。
+
+##### QUESTION 130
+
+```
 A company is planning to migrate a business-critical dataset to Amazon S3.
 The current solution design uses a single S3 bucket in the us-east-1 Region with versioning
 enabled to store the dataset.
@@ -5783,6 +5956,22 @@ replication,
 D. Create an additional S3 bucket with versioning in another Region and configure cross-origin
 resource (CORS).
 Answer: C
+一家公司计划将关键业务数据集迁移到Amazon S3。
+当前的解决方案设计在us-east-1 Region中使用单个S3存储桶并进行版本控制
+已启用以存储数据集。
+该公司的灾难恢复策略规定，所有数据都属于多个AWS区域。
+解决方案架构师应如何设计S3解决方案？
+A.在另一个区域中创建另一个S3存储桶，并配置跨区域复制。
+B.在另一个区域中创建另一个S3存储桶，并配置跨域资源共享
+（CORS）。
+C.在另一个区域中创建另一个带有版本控制的S3存储桶，并配置跨区域
+复制，
+D.在另一个区域中创建另一个带有版本控制的S3存储桶，并配置跨域
+资源（CORS）。
+答案：C
+```
+
+
 
 Explanation:
 Replication enables automatic, asynchronous copying of objects across Amazon S3 buckets.
@@ -5804,7 +5993,9 @@ Save time with our exam-specific cheat sheets:
 https://digitalcloud.training/certificatin-tinn architect-
 associate/storage/amazon-s3/
 
-QUESTION 131
+##### QUESTION 131
+
+```
 A company has application running on Amazon EC2 instances in a VPC.
 One of the applications needs to call an Amazon S3 API to store and read objects,
 The company's security policies restrict any internet-bound traffic from the applications.
@@ -5814,13 +6005,26 @@ B. Configure an S3 gateway endpoint.
 C. Create an S3 bucket in a private subnet.
 D. Create an S3 bucket in the same Region as the EC2 instance.
 Answer: B
+公司的应用程序在VPC的Amazon EC2实例上运行。
+应用程序之一需要调用Amazon S3 API来存储和读取对象，
+公司的安全策略限制了来自应用程序的任何互联网绑定流量。
+哪些措施可以满足这些要求并维护安全性？
+A.配置一个S3接口端点。
+B.配置一个S3网关端点。
+C.在专用子网中创建一个S3存储桶。
+D.在与EC2实例相同的Region中创建一个S3存储桶。
+```
+
+
 Explanation:
 Gateway Endpoint for S3 and DynamoDB
 https://medium.com/tensult/aws-vpc-endpin--4422
 https//docs .aws amazon.com/vpc/latestuserguide/vpc-endpoint.
 https://docs.aws.amazon.com.
 
-QUESTION 132
+##### QUESTION 132
+
+```
 A company's web application uses an Amazon RDS PostgreSQL DB instance to store jits
 application data.
 During the financial closing period at the start of every month. Accountants run large queries that
@@ -5835,6 +6039,22 @@ D. Create an Amazon Redshift database and direct reporting traffic to the Amazon
 database.
 Answer: A
 
+公司的Web应用程序使用Amazon RDS PostgreSQL数据库实例存储jit
+应用程序数据。
+在每个月初的财务结算期间。 会计师运行大型查询
+高使用率会影响数据库的性能。
+该公司希望最大程度地减少报告活动对Web应用程序的影响。
+解决方案架构师应采取什么措施以使用LEAST减少对数据库的影响
+多少努力？
+A.创建一个只读副本并将报告流量定向到该副本。
+B.创建一个多可用区数据库，并将报告流量定向到备用数据库。
+C.创建跨区域的只读副本，并将报告流量定向到该副本。
+D.创建一个Amazon Redshift数据库并将报告流量定向到Amazon Redshift
+数据库。
+```
+
+
+
 Explanation:
 Amazon RDS uses the MariaDB, MySQL, Oracle, PostgreSQL, and Microsoft SQL Server DB
 engines' built-in replication functionality to create a special type of DB instance called a read
@@ -5842,8 +6062,10 @@ replica from a source DB instance, Updates made to the source DB instance are as
 copied to the read replica. You can reduce the load on your source DB instance by routing read
 queries from your applications to the read replica.
 https://docs. .aพS .amazon.com/AmazonRDS/latestUserGuide/S ReadRepl.html
-QUESTION 133
 
+##### QUESTION 133
+
+```
 A company must generate sales reports at the beginning of every month.
 The reporting process launches 20 Amazon EC2 instances on the first of the month.
 The process runs for 7 days and cannot be interrupted. The company wants to minimize costs.
@@ -5853,6 +6075,16 @@ B. Spot Block Instances
 C. On-Demand Instances
 D. Scheduled Reserved Instances
 Answer: D
+公司必须在每个月初生成销售报告。
+该报告流程在每月的第一天启动20个Amazon EC2实例。
+该过程运行7天，不能中断。 该公司希望将成本降到最低。
+公司应选择哪种定价模式？
+A.预留实例
+B.竞价块实例
+C.按需实例
+D.预定的预留实例
+```
+
 Explanation:
 Scheduled Reserved Instances (Scheduled Instances) enable you to purchase capacity
 reservations that recur on a daily, weekly, or monthly basis, with a specified start time and
@@ -5863,7 +6095,10 @@ Scheduled Instances are a good choice for workloads that do not run continuously
 a regular schedule. For example, you can use Scheduled Instances for an application that runs
 during business hours or for batch processing that runs at the end of the week.
 https://docs. .aws.amazon.com/AWSEC2/latest/UserGuide/ec2-scheduled-instances.tml
-QUESTION 134
+
+##### QUESTION 134
+
+```
 A company is hosting a website behind multiple Application Load Balancers.
 The company has different distribution rights for its content around the world.
 A solutions architect needs to ensure that users are served the correct content without violating
@@ -5874,10 +6109,25 @@ B. Configure Application Load Balancers with AWS WAF.
 C. Configure Amazon Route 53 with a geolocation policy,
 D. Configure Amazon Route 53 with a geoproximity routing policy.
 Answer: C
+
+一家公司正在多个应用程序负载平衡器后面托管一个网站。
+该公司对其内容在世界各地具有不同的发行权。
+解决方案架构师需要确保为用户提供正确的内容而不会违反
+发行权。
+解决方案架构师应选择哪种配置来满足这些要求？
+A.使用AWS WAF配置Amazon CloudFront。
+B.使用AWS WAF配置应用程序负载平衡器。
+C.使用地理位置策略配置Amazon Route 53，
+D.使用地理邻近性路由策略配置Amazon Route 53。
+```
+
 Explanation:
 https://docs. aws .amazon.com/Route53/latest/DeveloperGuide/routing-policy.html (geolocation
 routing)
-QUESTION 135
+
+##### QUESTION 135
+
+```
 A company's website is using an Amazon RDS MySQL 'Multi-AZ DB instance for its transactional
 data storage.
 There are other internal systems that query this DB instance to fetch data for internal batch
@@ -5889,12 +6139,29 @@ Which solution will improve the website's performance?
 A. Use an RDS PostgreSQL DB instance instead of a MySQL database.
 B. Use Amazon ElastiCache to cache the query responses for the website.
 C. Add an additional Availability Zone to the current RDS MySQL Multi.AZ DB instance.
-
 D. Add a read replica to the RDS DB instance and configure the internal systems to query the read
 replica.
 Answer: D
+一家公司的网站使用Amazon RDS MySQL'Multi-AZ数据库实例进行交易
+数据存储。
+还有其他内部系统查询此数据库实例以获取数据以进行内部批处理
+处理
+RDS数据库实例大大降低了内部系统的数据获取速度。
+这会影响网站的读写性能，并且用户的响应速度会很慢
+次。
+哪种解决方案可以改善网站的性能？
+答：使用RDS PostgreSQL数据库实例而不是MySQL数据库。
+B.使用Amazon ElastiCache缓存网站的查询响应。
+C.向当前的RDS MySQL Multi.AZ数据库实例添加一个额外的可用区。
+D.将只读副本添加到RDS数据库实例，并配置内部系统以查询该只读副本
+复制品。
+```
 
-QUESTION 136
+
+
+##### QUESTION 136
+
+```
 A solutions architect is designing storage for ล high performance computing (HPC) environment
 based on Amazon Linux.
 The workload stores and processes a large amount of engineering drawings that require shared
@@ -5905,11 +6172,25 @@ B. Amazon FSx for Lustre
 C. Amazon EC2 instance store
 D. Amazon EBS Provisioned IOPS SSD (io1)
 Answer: B
+解决方案架构师正在为ล高性能计算（HPC）环境设计存储
+基于Amazon Linux。
+工作负载存储和处理大量需要共享的工程图
+存储和重型计算。
+哪个存储选项将是最佳解决方案？
+A.Amazon弹性文件系统（Amazon EFS）
+B.适用于Lustre的Amazon FSx
+C.Amazon EC2实例存储
+D.Amazon EBS预置的IOPS SSD（io1）
+```
+
+
 Explanation:
 https://d1.awsstatic.com/whitepapers/AWn HPC%20Storage%20Option
 s_ 2019_ FINAL.pdf (p.8)
 
-QUESTION 137
+##### QUESTION 137
+
+```
 A company is performing an AWS Well-Architected Framework review of an existing workload
 deployed on AWS.
 The review identified a public-facing website running on the same Amazon EC2 instance as a
@@ -5922,12 +6203,32 @@ A. Use AWS Directory Service to create a managed Active Directory.
 Uninstall Active Directory ๐ก the current EC2 instance.
 B. Create another EC2 instance in the same subnet and reinstall Active Directory on it.
 Uninstall Active Directory.
-,. Use AWS Directory Service to create an Active Directory connector.
+C. Use AWS Directory Service to create an Active Directory connector.
 Proxy Active Directory requests to the Active domain controller running on the current EC2
 instance.
 D. Enable AWS Single Sign-On (AWS SSO) with Security Assertion Markup Language (SAML) 2.0
 federation with the current Active Directory controller.
 Modify the EC2 instance's security group to deny public access to Active Directory.
+一家公司正在对现有工作负载执行AWS架构完善的审查
+部署在AWS上
+该审查确定了一个面向公众的网站，该网站与Amazon EC2实例在同一Amazon EC2实例上运行
+最近安装以支持其他AWS的Microsoft Active Directory域控制器
+服务。
+解决方案架构师需要推荐一种新的设计，以提高安全性。
+体系结构并最小化对IT员工的管理需求。
+解决方案架构师应该建议什么？
+A.使用AWS Directory Service创建托管Active Directory。
+卸载Active Directory ๐ก当前的EC2实例。
+B.在同一子网中创建另一个EC2实例，然后在其上重新安装Active Directory。
+卸载Active Directory。
+C。使用AWS Directory Service创建Active Directory连接器。
+对当前EC2上运行的Active域控制器的代理Active Directory请求
+实例。
+D.使用安全性声明标记语言（SAML）2.0启用AWS Single Sign-On（AWS SSO）
+当前Active Directory控制器的联合。
+修改EC2实例的安全组以拒绝对Active Directory的公共访问。
+```
+
 Answer: A
 Explanation:
 Migrate AD to AWS Managed AD and keep the webserver alone.. Reduce risk = remove AD from
@@ -5936,7 +6237,11 @@ that EC2. Minimize admin = remove AD from any EC2
 Active Directory connector is only for ON-PREM AD. The one they have exists in the cloud
 already.
 
-QUESTION 138
+AWS Directory Service使您可以将Microsoft Active Directory（AD）作为托管服务运行。适用于Microsoft Active Directory的AWS Directory Service（也称为AWS Managed Microsoft AD）由Windows Server 2012 R2驱动。选择并启动此目录类型后，它将创建为连接到您的虚拟私有云（VPC）的一对高可用性域控制器。域控制器在您选择的区域中的不同可用区中运行。主机监视和恢复，数据复制，快照和软件更新将自动为您配置和管理。
+
+##### QUESTION 138
+
+```
 A company runs an application in a branch office within a small data closet with no virtualized
 compute resources.
 The application data is stored on an NFS volume, Compliance standards require a daily offsite
@@ -5949,6 +6254,20 @@ C. Install an AWS Storage Gateway volume gateway with stored volumes on premises
 the data to Amazon S3.
 D. Install an AWS Storage Gateway volume gateway with cached volumes on premises to replicate
 the data to Amazon S3.
+一家公司在没有虚拟化的小型数据柜中的分支机构中运行应用程序
+计算资源。
+应用程序数据存储在NFS卷上，合规性标准要求每天在现场
+NFS卷的备份。
+哪种解决方案满足这些要求？
+A.在本地安装一个AWS Storage Gateway文件网关，以将数据复制到Amazon S3。
+B.在本地安装AWS Storage Gateway文件网关硬件设备以复制
+数据到Amazon S3。
+C.在本地安装具有存储卷的AWS Storage Gateway卷网关以进行复制
+数据发送到Amazon S3。
+D.在本地安装具有缓存卷的AWS Storage Gateway卷网关以进行复制
+数据发送到Amazon S3。
+```
+
 Answer: B
 Explanation
 Keyword: NFS + Compliance
@@ -5958,6 +6277,8 @@ resident applications that need file storage in S3 for object based workloads. U
 only, stored directly on S3. File gateway offers SMB or NFS-based access to data in Amazon S3
 with local caching.
 
+关键字：NFS + Compliance File Gateway提供了一个虚拟的本地文件服务器，使您能够将文件作为对象存储和检索在Amazon S3中。它可用于本地应用程序以及需要在S3中存储文件以用于基于对象的工作负载的Amazon EC2驻留应用程序。仅用于平面文件，直接存储在S3上。文件网关通过本地缓存提供对Amazon S3中数据的基于SMB或NFS的访问
+
 References:
 https://aws. .amazon.com/blogs/aws/file-interface-to-aws-storage-gateway/
 https://d0.awsstatic.com/whitepapers/aws-storage-gateway-file-gateway-for-hybrid-
@@ -5966,7 +6287,9 @@ Save time with our exam-specific cheat sheets:
 https://digitalcloud.training/certification-training/aws-solutions-architect-assciate/storage/aws-
 storage-gateway/
 
-QUESTION 139
+##### QUESTION 139
+
+```
 An application hosted on AWS is experiencing performance problems, and the application vendor
 wants to perform an analysis of the log file to troubleshoot further. The log file is stored on
 Amazon S3 and is 10 GB in size. 
@@ -5978,8 +6301,25 @@ C. Generate a presigned URL and have the vendor download the log file before it 
 D. Create an IAM user for the vendor to provide access to the S3 bucket and the application.
 Enforce multifactor authentication.
 Answer: C
+AWS上托管的应用程序遇到性能问题，应用程序供应商
+想要对日志文件进行分析以进一步排除故障。 日志文件存储在
+Amazon S3，大小为10 GB。
+应用程序所有者将在有限的时间内使日志文件对供应商可用。
+最安全的方法是什么？
+答：启用对S3对象的公共读取，并提供到供应商的链接。
+B.将文件上传到Amazon WorkDocs并与供应商共享公共链接。
+C.生成一个预签名的URL，并让供应商在日志文件过期之前下载该日志文件。
+D.为供应商创建一个IAM用户，以提供对S3存储桶和应用程序的访问。
+强制执行多因素身份验证。
+```
 
-QUESTION 140
+默认情况下，所有对象都是私有的。只有对象所有者有权访问这些对象。但是，对象所有者可以选择使用他人自己的安全凭证通过创建预签名URL来与其他对象共享对象，以授予有时间限制的下载对象的权限。 为对象创建预签名URL时，必须提供安全凭证，指定存储桶名称，对象密钥，指定HTTP方法 （获取下载对象）和到期日期和时间。预先签名的URL仅在指定的持续时间内有效。 接收预签名URL的任何人都可以访问该对象。例如，如果存储桶中有视频，并且存储桶和对象都是私有的，则可以通过生成预签名的URL与他人共享视频。
+
+
+
+##### QUESTION 140
+
+```
 A company hosts its product information webpages on AWS,
 The existing solution uses multiple Amazon C2 instances behind an Application Load Balancer in
 an Auto Scaling group.
@@ -5991,24 +6331,48 @@ What should a solutions architect do to meet these requirements?
 A. Redesign the application to use Amazon CloudFront.
 B. Redesign the application to use AWS Elastic Beanstalk.
 C. Redesign the application to use a Network Load Balancer.
-D. Redesign the application to use Amazon S3 static website hosting,
+D. Redesign the application to use Amazon S3 static website hosting
+一家公司在AWS上托管其产品信息网页，
+现有解决方案在以下应用程序负载均衡器后面使用多个Amazon C2实例
+Auto Scaling组。
+该网站还使用自定义DNS名称，并且仅使用
+专用SSL证书。
+该公司正在计划推出新产品，并希望确保来自各地的用户
+世界在新网站上拥有最好的体验，
+解决方案架构师应该怎么做才能满足这些要求？
+A.重新设计应用程序以使用Amazon CloudFront。
+B.重新设计应用程序以使用AWS Elastic Beanstalk。
+C.重新设计应用程序以使用网络负载平衡器。
+D.重新设计应用程序以使用Amazon S3静态网站托管
+```
+
+
 Answer: A
 
-QUESTION 141
-A solutions architect observes that a nightly batch processing job is automatically scaled up for 1
-hour before the desired Amazon EC2 capacity is reached. The peak capacity is the same every
-night and the batch jobs always start at 1 AM. The solutions architect needs to find a cost-
-effective solution that will allow for the desired EC2 capacity to be reached quickly and allow the
-Auto Scaling group to scale down after the batch jobs are complete.
+##### QUESTION 141
+
+```
+A solutions architect observes that a nightly batch processing job is automatically scaled up for 1 hour before the desired Amazon EC2 capacity is reached. The peak capacity is the same every night and the batch jobs always start at 1 AM. The solutions architect needs to find a cost-effective solution that will allow for the desired EC2 capacity to be reached quickly and allow the Auto Scaling group to scale down after the batch jobs are complete.
 What should the solutions architect do to meet these requirements?
 A. Increase the minimum capacity for the Auto Scaling group.
-B.
-Increase the maximum capacity for the Auto Scaling group.
+B.Increase the maximum capacity for the Auto Scaling group.
 C. Configure scheduled scaling to scale up to the desired compute level.
 D. Change the scaling policy to add more EC2 instances during each scaling operation.
 Answer: C
+解决方案架构师观察到，在达到所需的Amazon EC2容量之前，夜间批处理作业会自动扩大1小时。 每天晚上的峰值容量是相同的，并且批处理作业始终在凌晨1点开始。 解决方案架构师需要找到一种经济高效的解决方案，以快速达到所需的EC2容量，并允许Auto Scaling组在批处理作业完成后按比例缩小规模。
+解决方案架构师应该怎么做才能满足这些要求？
+A.增加Auto Scaling组的最小容量。
+B．增加Auto Scaling组的最大容量。
+C.配置计划的缩放比例以扩展到所需的计算级别。
+D.更改扩展策略以在每次扩展操作期间添加更多EC2实例。
+答案：C
+```
 
-QUESTION 142
+
+
+##### QUESTION 142
+
+```
 An ecommerce company is running a multi-tier application on AWS. The front-end and backend
 tiers both run on Amazon EC2. and the database runs on Amazon RDS for MySQL. The backend
 tier communicates with the RDS instance. There are frequent calls to return identical datasets
@@ -6020,7 +6384,22 @@ C. Implement an RDS for MySQL read replica to cache database calls.
 D. Implement Amazon Kinesis Data Firehose to stream the calls to the database.
 Answer: B
 
-QUESTION 143
+一家电子商务公司正在AWS上运行多层应用程序。 前端和后端
+层均在Amazon EC2上运行。 并且该数据库在Amazon RDS for MySQL上运行。 后端
+层与RDS实例进行通信。 经常调用返回相同的数据集
+从数据库中导致性能下降。
+应该采取什么措施来提高后端的性能？
+A.实施Amazon SNS来存储数据库调用。
+B.实现Amazon ElastiCache以缓存大型数据集。
+C.为MySQL只读副本实现RDS以缓存数据库调用。
+D.实施Amazon Kinesis Data Firehose以将调用流式传输到数据库。
+```
+
+只读副本和Elasticache都有助于提高性能。 这里最主要的是经常访问的数据集，因此Elasticache用于缓存经常访问的数据。
+
+##### QUESTION 143
+
+```
 A company's application hosted on Amazon EC2 instances needs to access an Amazon S3
 bucket. Due to data sensitivity, traffic cannot traverse the internet How should a solutions
 architect configure access?
@@ -6028,9 +6407,17 @@ A. Create a private hosted zone using Amazon Route 53.
 B. Configure a VPC gateway endpoint for Amazon S3 in the VPC.
 C. Configure AWS PrivateLink between the EC2 instance and the S3 bucket.
 D. Set up a site-to-site VPN connection between the VPC and the S3 bucket.
-Answer: B
+托管在Amazon EC2实例上的公司的应用程序需要访问Amazon S3存储桶。由于数据敏感性，流量无法穿越Internet。解决方案架构师应如何配置访问权限？ 
+A.使用Amazon Route 53创建一个私有托管区域。B.在VPC中为Amazon S3配置VPC网关终端节点。 C.在EC2实例和S3存储桶之间配置AWS PrivateLink。 D.在VPC和S3存储桶之间建立站点到站点VPN连接。
 
-QUESTION 144
+Answer: B
+```
+
+
+
+##### QUESTION 144
+
+```
 An application runs on Amazon EC2 instances in private subnets. The application needs to
 access an Amazon DynamoDB table.
 What is the MOST secure way to access the table while ensuring that the traffic does not leave
@@ -6040,6 +6427,17 @@ B. Use a NAT gateway in a public subnet.
 C. Use a NAT instance in a private subnet.
 D. Use the internet gateway attached to the VPC.
 Answer: A
+应用程序在专用子网中的Amazon EC2实例上运行。 该应用程序需要
+访问Amazon DynamoDB表。
+在确保流量不离开的同时访问表的最安全的方法是什么
+AWS网络？
+A.将VPC端点用于DynamoDB。
+B.在公共子网中使用NAT网关。
+C.在专用子网中使用NAT实例。
+D.使用连接到VPC的Internet网关。
+```
+
+
 Explanantion
 VPC Enpoint
 An Interface endpoint uses AWS PrivateLink and is an elastic network interface (ENI) with a
@@ -6067,7 +6465,9 @@ References:
 https://docs. .aws.amazon.com/amazondynamodb/atestdeveloperguide/vpc-endpoints-
 dynamodb.html
 
-QUESTION 145
+##### QUESTION 145
+
+```
 A solutions architect needs to design a low-latency solution for a static single-page application
 accessed by users utilizing a custom domain name. The solution must be serverless, encrypted
 in transit, and cost-effective,
@@ -6080,17 +6480,44 @@ D. Amazon CloudFront
 E. Elastic Load Balancer
 Answer: AD
 
-QUESTION 146
+418/5000
+解决方案架构师需要为静态单页应用程序设计低延迟解决方案
+由使用自定义域名的用户访问。 解决方案必须是无服务器的，加密的
+在运输过程中且具有成本效益，
+解决方案架构师应使用哪种AWS服务和功能组合？ （选择
+二。）
+A.亚马逊S3
+B.亚马逊EC2
+C.AWS Fargate
+D.Amazon CloudFront
+E.弹性负载平衡器
+```
+
+
+
+##### QUESTION 146
+
+```
 A company has global users accessing an application deployed in different AWS Regions,
 exposing public static IP addresses. The users are experiencing poor performance when
 accessing the application over the internet.
 What should a solutions architect recommend to reduce internet latency?
 A. Set up AWS Global Accelerator and add endpoints.
-
 B. Set up AWS Direct Connect locations in multiple Regions.
 C. Set up an Amazon CloudFront distribution to access an application.
 D. Set up an Amazon Route 53 geoproximity routing policy to route traffic.
 Answer: A
+公司有全球用户访问部署在不同AWS区域中的应用程序，
+公开公共静态IP地址。 用户在以下情况下表现不佳
+通过互联网访问应用程序。
+解决方案架构师应建议什么以减少Internet延迟？
+A.设置AWS Global Accelerator并添加终端节点。
+B.在多个区域中设置AWS Direct Connect位置。
+C.设置一个Amazon CloudFront发行版以访问应用程序。
+D.设置Amazon Route 53地理接近路由策略以路由流量。
+```
+
+
 Explanation:
 AWS Global Accelerator is a service in which you create accelerators to improve availability and
 performance of your applications for local and global users. Global Accelerator directs traffic to
@@ -6123,7 +6550,9 @@ time with our exam-specific cheat sheets:
 https://digitalcloud .training/certification-training/aws- solutions-architect- -associate/networking-and-
 content-delivery/aws-global-accelerator/
 
-QUESTION 147
+##### QUESTION 147
+
+```
 An application requires a development environment (DÊV) and production environment (PROD)
 for several years. The DEV instances will run for 10 hours each day during normal business
 hours, while the PROD instances will run 24 hours each day, A solutions architect needs to
@@ -6134,8 +6563,22 @@ B. DEV with On-Demand Instances and PROD with Spot Instances
 C. DEV with Scheduled Reserved Instances and PROD with Reserved Instances
 D. DEV with On-Demand Instances and PROD with Scheduled Reserved Instances
 Answer: C
+应用程序需要开发环境（DÊV）和生产环境（PROD）
+几年来。 在正常业务期间，DEV实例每天将运行10个小时
+小时，而PROD实例每天24小时运行，那么解决方案架构师需要
+确定计算实例购买策略以最小化成本。
+哪种解决方案最有效？
+A.具有竞价型实例的DEV和具有按需实例的PROD
+B.带按需实例的DEV和带竞价实例的PROD
+C.具有预定保留实例的DEV和具有保留实例的PROD
+D.具有按需实例的DEV和具有计划的预留实例的PROD
+```
 
-QUESTION 148
+
+
+##### QUESTION 148
+
+```
 A solutions architect is designing a customer-facing application. The application is expected to
 have a variable amount of reads and writes depending on the time of year and clearly defined
 access patterns throughout the year. Management requires that database auditing and scaling be
@@ -6155,6 +6598,28 @@ E. Use Amazon RDS with auto scaling.
 Enable the database auditing parameter.
 Configure the backup retention period to at least 1 day.
 Answer: AE
+解决方案架构师正在设计面向客户的应用程序。 该应用程序有望
+根据一年中的不同时间具有不同的读写次数，并且定义明确
+全年的访问方式。 管理部门要求对数据库进行审核和扩展
+在AWS云中进行管理。 恢复点目标（RPO）必须少于5小时。
+哪一个。 解决方案可以做到这一点？ （选择两个。）
+A.使用Amazon DynamoDB自动缩放功能，
+使用按需备份和AWS CloudTrail。
+B.将Amazon DynamoDB与自动缩放一起使用，
+使用按需备份和Amazon DynamoDB流。
+C.使用Amazon Redshift配置并发扩展。
+启用审核日志记录。
+每4小时执行一次数据库快照。
+D.将Amazon RDS与预置的lOPS一起使用。
+启用数据库审核参数。
+每5小时执行一次数据库快照。
+E.将Amazon RDS与自动缩放一起使用。
+启用数据库审核参数。
+将备份保留期配置为至少1天。
+答：AE
+```
+
+
 Explanation:
 A. Use Amazon DynamoDB with auto scaling. Use on-demand backups and AWS CloudTrail.
 CORRECT - Scalable, with backup and AWS Managed Auditing
@@ -6174,7 +6639,9 @@ CORRECT - Scalable, AWS managed auditing and backup. The backup frequency is not
 but have no technical limitation which states it cannot be less 5 hours (1 day is retention period of
 the backup).
 
-QUESTION 149
+##### QUESTION 149
+
+```
 A company hosts its website on Amazon S3. The website serves petabytes of outbound traffic
 monthly, which accounts for most of the company's AWS costs,
 What should a solutions architect do to reduce costs?
@@ -6184,12 +6651,25 @@ C.
 Use AWS Global Accelerator and specify the existing website as the endpoint.
 D, Rearchitect the website to run on a combination of Amazon API Gateway and AWS Lambda.
 Answer: A
+517/5000
+一家公司在Amazon S3上托管其网站。 该网站提供了PB的出站流量
+每月，这占了公司大部分AWS成本，
+解决方案架构师应该怎么做才能降低成本？
+A.使用现有网站作为来源配置Amazon CloudFront。
+B.将网站移至带有Amazon EBS卷的Amazon EC2进行存储。
+C。使用AWS Global Accelerator并将现有网站指定为终端节点。
+D，重新构建网站以在Amazon API Gateway和AWS Lambda的组合上运行。
 Explanation:
 A textbook case for CloudFront, The data transfer cost in CloudFront is lower than in S3. With
 heavy read operations of static content, it's more economical to add CloudFront in front of you S3
 bucket.
+```
 
-QUESTION 150
+
+
+##### QUESTION 150
+
+```
 A solution architect has created two IAM policies: Policy1 and Policy2. Both policies are attached
 to an IAM group.
 
@@ -6226,12 +6706,16 @@ A. Deleting IAM users
 B. Deleting directories
 C. Deleting Amazon EC2 instances
 D. Deleting logs from Amazon CloudWatch Logs
-Answer: C
+Answer: C  
+```
 
-QUESTION 151
+
+
+##### QUESTION 151
+
+```
 A solutions architect is helping a developer design a new ecommerce shopping cart application
 using AWS services. The developer is unsure of the current database schema and expects to
-
 make changes as the ecommerce site grows. The solution needs to be highly resilient and
 capable of automatically scaling read and write capacity.
 Which database solution meets these requirements?
@@ -6240,11 +6724,26 @@ B. Amazon DynamoDB with on-demand enabled
 C. Amazon DynamoDB with DynamoDB Streams enabled
 D. Amazon SQS and Amazon Aurora PostgreSQL
 Answer: B
+解决方案架构师正在帮助开发人员设计新的电子商务购物车应用程序
+使用AWS服务。 开发人员不确定当前的数据库架构，并希望
+随着电子商务网站的发展进行更改。 解决方案必须具有高度的弹性和
+能够自动扩展读写容量。
+哪个数据库解决方案满足这些要求？
+A.Amazon Aurora PostgreSQL
+B.启用按需的Amazon DynamoDB
+C.启用了DynamoDB流的Amazon DynamoDB
+D.Amazon SQS和Amazon Aurora PostgreSQL
+
+```
+
+
 Explanation:
 hts://aws. amazon.com/pt/about-aws/whats-nw2181
 demand/
 
-QUESTION 152
+##### QUESTION 152
+
+```
 A solutions architect is designing an architecture for a new application that requires low network
 latency and high network throughput between Amazon EC2 instances. Which component should
 be included in the architectural design?
@@ -6252,9 +6751,19 @@ A. An Auto Scaling group with Spot Instance types.
 B. A placement group using a cluster placement strategy.
 C. A placement group using a partition placement strategy.
 D. An Auto Scaling group with On-Demand instance types.
+解决方案架构师正在为需要低网络的新应用程序设计体系结构
+Amazon EC2实例之间的延迟和高网络吞吐量。 哪个组件应该
+被包括在建筑设计中？
+A.具有竞价型实例类型的Auto Scaling组。
+B.使用集群放置策略的放置组。
+C.使用分区放置策略的放置组。
+D.具有按需实例类型的Auto Scaling组。
 Answer: B
+```
 
-QUESTION 153
+##### QUESTION 153
+
+```
 A company has a web application with sporadic usage patterns. There is heavy usage at the
 beginning of each month, moderate usage at the start of each week, and unpredictable usage
 during the week. The application consists of a web server and a MySQL database server running
@@ -6266,8 +6775,27 @@ B. Amazon RDS for MySQL
 C. MySQL-compatible Amazon Aurora Serverless
 D. MySQL deployed on Amazon EC2 in an Auto Scaling group
 Answer: c
+公司的Web应用程序具有零星的使用模式。 有大量的使用
+每个月初，每个星期初使用量适中，使用量不可预测
+本周内。 该应用程序由运行中的Web服务器和MySQL数据库服务器组成
+在数据中心内。 该公司希望将应用程序移至AWS Cloud，并
+需要选择一个不需要数据库修改的具有成本效益的数据库平台。
+哪种解决方案可以满足这些要求？
+A.Amazon DynamoDB
+B.适用于MySQL的Amazon RDS
+C.与MySQL兼容的Amazon Aurora Serverless
+D.在Auto Scaling组中部署在Amazon EC2上的MySQL
+```
 
-QUESTION 154
+来自AWS Aurora Serverless：“它使您可以在云中运行数据库而无需管理任何数据库实例。这是一种简单，具有成本效益的选项，适用于偶发性，间歇性或不可预测的工作负载。”
+
+该问题明确指出这是零星的。确实，这是可以预见的，因为我们确实知道什么时候流量很低并且什么时候会增加。但是，我认为无服务器解决方案可以向外扩展，并且仅在需要时才可以->节省成本，从而可以更好地应对此类工作负载。
+
+一周内无法预测的使用情况-> Aurora
+
+##### QUESTION 154
+
+```
 A solutions architect is designing a mission-critical web application. It will consist of Amazon EC2
 instances behind an Application Load Balancer and a relational database. The database should
 be highly available and fault tolerant.
@@ -6275,12 +6803,26 @@ Which database implementations will meet these requirements? (Select TWO.)
 A. Amazon Redshift
 B. Amazon DynamoDB
 C. Amazon RDS for MySQL
-
 D. MySQL-compatible Amazon Aurora Multi-AZ
 E. Amazon RDS for SQL Server Standard Edition Mufti-AZ
 Answer: DE
 
-QUESTION 155
+解决方案架构师正在设计任务关键型Web应用程序。 它将由Amazon EC2组成
+Application Load Balancer和关系数据库后面的实例。 数据库应该
+高可用性和容错能力。
+哪些数据库实现将满足这些要求？ （选择两个。）
+A.亚马逊Redshift
+B.亚马逊DynamoDB
+C.MySQL的Amazon RDS
+D.与MySQL兼容的Amazon Aurora Multi-AZ
+E.适用于SQL Server Standard Edition Mufti-AZ的Amazon RDS
+```
+
+
+
+##### QUESTION 155
+
+```
 A media company is evaluating the possibility of moving its systems to the AWS Cloud. The
 company needs at least 10 TB of storage with the maximum possible I/O performance for video
 processing, 300 TB of very durable storage for storing media content, and 900 TB of storage to
@@ -6295,8 +6837,26 @@ and Amazon S3 for archival storage
 D. Amazon EC2 instance store for maximum performance, Amazon S3 for durable data storage, and
 Amazon S3 Glacier for archival storage
 Answer: D
+一家媒体公司正在评估将其系统迁移到AWS云的可能性。 的
+公司需要至少10 TB的存储，并具有视频的最大I / O性能
+处理能力，300 TB的非常耐用的存储空间用于存储媒体内容，以及900 TB的存储空间
+满足不再使用的档案媒体的要求。
+解决方案架构师应推荐哪些服务来满足这些要求？
+A. Amazon EBS提供最佳性能，Amazon S3提供持久性数据存储，Amazon S3
+档案存储冰川
+B. Amazon EBS，以获得最佳性能。 用于持久数据存储的Amazon EFS和Amazon S3
+档案存储冰川
+C. Amazon EC2实例存储可实现最佳性能，Amazon EFS可实现持久数据存储，
+和Amazon S3用于档案存储
+D. Amazon EC2实例存储可实现最佳性能，Amazon S3可实现持久数据存储，以及
+Amazon S3 Glacier用于档案存储
+```
 
-QUESTION 156
+
+
+##### QUESTION 156
+
+```
 A company hosts an application on an Amazon EC2 instance that requires a maximum of 200 GB
 storage space. The application is used infrequently, with peaks during mornings and evenings.
 Disk I/O varies, but peaks at 3,000 IOPS. The chief financial officer of the company is concerned
@@ -6308,6 +6868,20 @@ B. Amazon EBS General Purpose SSD (gp2)
 C. Amazon EBS Provisioned lOPS SSD (io1)
 D. Amazon EBS Throughput Optimized HDD (st1)
 Answer: B
+
+一家公司在Amazon EC2实例上托管一个应用程序，该应用程序最多需要200 GB
+储存空间。 该应用程序很少使用，在早晨和晚上都有高峰。
+磁盘I / O有所不同，但最高达到3,000 IOPS。 有关公司的首席财务官
+有关成本的问题，并已要求解决方案架构师推荐最经济高效的存储
+不牺牲性能的选择。
+解决方案架构师应建议哪种解决方案？
+A.Amazon EBS冷硬盘（sc1）
+B.Amazon EBS通用SSD（gp2）
+C.Amazon EBS预置的lOPS SSD（io1）
+D.Amazon EBS吞吐量优化的硬盘（st1）
+```
+
+
 Explanation:
 General Purpose SSD (gp2) volumes offer cost- effective storage that is ideal for a broad range of
 workloads. These volumes deliver single-digit millisecond latencies and the ability to burst to
@@ -6332,7 +6906,9 @@ Save time with our exam-specific cheat sheets:
 https://digitalcloud.training/certification-tnn--
 associate/compute/amazon-ebs/
 
-QUESTION 157
+##### QUESTION 157
+
+```
 A company delivers files in Amazon S3 to certain users who do not have AWS credentials. These
 users must be given access for a limited lime. What should a solutions architect do to securely
 meet these requirements?
@@ -6342,7 +6918,20 @@ C. Encrypt files using AWS KMS and provide keys to the users.
 D. Create and assign IAM roles that will grant GetObject permissions to the users.
 Answer: B
 
-QUESTION 158
+一家公司将Amazon S3中的文件交付给某些没有AWS凭证的用户。 这些
+必须授予用户使用有限石灰的权限。 解决方案架构师应如何做才能安全
+满足这些要求？
+A.在Amazon S3存储桶上启用公共访问。
+B.生成一个预先签名的URL与用户共享。
+C.使用AWS KMS加密文件并向用户提供密钥。
+D.创建并分配IAM角色，这些角色将向用户授予GetObject权限。
+```
+
+
+
+##### QUESTION 158
+
+```
 A leasing company generates and emails PDF statements every month for all its customers.
 Each statement is about 400 KB in size. Customers can download their statements from the
 website for up to 30 days from when the statements were generated. At the end of their 3-year
@@ -6359,8 +6948,27 @@ D. Store the statements using the Amazon S3 Standard-Infrequent Access (S3 Stand
 class.
 Create a lifecycle policy to move the statements to Amazon S3 Glacier storage after 30 days.
 Answer: D
+一家租赁公司每月为其所有客户生成并通过电子邮件发送PDF报表。每个语句的大小约为400 KB。
+客户可以在生成报表之日起30天内从网站下载其报表。在3年租期结束时，会通过电子邮件向客户发送包含所有对帐单的ZIP文件。对于这种情况，最有成本效益的存储解决方案是什么？
+A.使用Amazon S3 Standard存储类存储语句。创建生命周期策略以
+1天后将报表移至Amazon S3 Glacier存储。
+B.使用Amazon S3 Glacier存储类存储语句。创建生命周期策略以
+30天后将报表移至Amazon S3 Glacier Deep Archive存储。
+使用Amazon S3 Standard存储类存储语句。创建生命周期策略以
+之后将语句移至Amazon S3一次区域不频繁访问（S3 One Zone-lA）存储
+30天。
+D.使用Amazon S3 Standard-Infrequent Access（S3 Standard-IA）存储存储语句
+类。
+创建生命周期策略，以在30天后将语句移至Amazon S3 Glacier存储。
+```
 
-QUESTION 159
+S3-IA的每个文件大小至少为128kb，存储时间至少为30天。深度存档是最便宜的存档，也是最适合的存档，因为3年后将可以检索文件。
+
+
+
+##### QUESTION 159
+
+```
 A solutions architect is moving the static content from a public website hosted on Amazon EC2
 instances to an Amazon S3 bucket. An Amazon CloudFront distribution will be used to deliver the
 static assets. The security group used by the EC2 instances restricts access to a limited set of IP
@@ -6383,7 +6991,34 @@ on the S3 bucket or on the files within the S3 bucket so that only the newly cre
 read and download permissions.
 Answer: AB
 
-QUESTION 160
+解决方案架构师正在从Amazon EC2上托管的公共网站转移静态内容
+实例到Amazon S3存储桶。 Amazon CloudFront发行版将用于交付
+静态资产。 EC2实例使用的安全组将访问限制为一组有限的IP
+范围。同样，对静态内容的访问也应受到限制。
+哪些步骤组合可以满足这些要求？ （选择两个。）
+A.创建一个原始访问身份（OAI）并将其与分发关联。改变
+存储桶策略中的权限，以便只有OAl可以读取对象。
+B.创建一个包含与EC2中相同的IP限制的AWS WAF Web ACL
+安全组。将此新的Web ACL与CloudFront分配关联。
+C.创建一个新的安全组，其中包括与当前EC2中相同的IP限制
+安全组，将此新安全组与CloudFront分配关联。
+D.创建一个新的安全组，其中包括与当前EC2中相同的IP限制
+安全组。将此新安全组与托管静态内容的S3存储桶相关联。
+E.创建一个新的IAM角色并将该角色与分发相关联，或者更改权限
+在S3存储桶或S3存储桶中的文件上，以便只有新创建的IAM角色具有
+阅读和下载权限。
+
+```
+
+使用签名的网址或Cookie -限制对Amazon S3存储桶中内容的访问=> A -使用AWS WAF Web ACL => B -使用地理限制
+
+Explanation:
+C & D - S3 cannot be in a ASG
+E - Object permissions in a bucket must be given to the files not to the bucket in general.
+
+##### QUESTION 160
+
+```
 A company has a large Microsoft SharePoint deployment running on-premises that requires
 Microsoft Windows shared file storage. The company wants to migrate this workload to the AWS
 Cloud and is considering various storage options. The storage solution must be highly available
@@ -6395,6 +7030,17 @@ C. Create an Amazon S3 bucket and configure Microsoft Windows Server to mount it
 D, Create an Amazon FSx for Windows File Server file system on AWS and set the Active Directory
 domain for authentication.
 Answer: D
+公司有一个大型Microsoft SharePoint部署在本地运行，需要Microsoft Windows共享文件存储。 该公司希望将此工作负载迁移到AWS
+云，正在考虑各种存储选项。 存储解决方案必须具有高可用性，并且必须与Active Directory集成在一起才能进行访问控制。
+哪种解决方案可以满足这些要求？
+A.配置Amazon EFS存储并设置Active Directory域以进行身份验证。
+B.在两个可用区中的AWS Storage Gateway文件网关上创建SMB文件共享。
+C.创建一个Amazon S3存储桶并配置Microsoft Windows Server以将其作为卷安装，
+D，在AWS上为Windows文件服务器创建Amazon FSx文件系统并设置Active Directory
+用于身份验证的域。
+```
+
+
 Explanation
 Amazon FSx for Windows File Server provides fully managed, highly reliable, and scalable file
 storage that is accessible over the industry-standard Server Message Block (SMB) protocol. It is
@@ -6423,7 +7069,9 @@ Save time with our exam-specific cheat sheets:
 https://digitalcloud .training/certification-training/aws-solutions-architect-
 associate/storage/amazon-fsx/
 
-QUESTION 161
+##### QUESTION 161
+
+```
 A company runs multiple Amazon EC2 Linux instances in a VPC with applications that use a
 hierarchical directory structure. The applications need to rapidly and concurrently read and write
 to shared storage How can this be achieved?
@@ -6434,8 +7082,18 @@ to all the EC2 instances.
 D. Create file systems on Amazon EBS volumes attached to each EC2 instance. Synchronize the
 Amazon EBS volumes across the different EC2 instances.
 Answer: A
+一家公司在VPC中使用使用分层目录结构的应用程序运行多个Amazon EC2 Linux实例。应用程序需要快速并发地对共享存储进行读写操作如何实现？ 
+A.创建一个Amazon EFS文件系统并从每个EC2实例安装它，
+B。创建一个Amazon S3存储桶并允许从VPC中的所有EC2实例进行访问。 
+C.在Amazon EBS预置的lOPS SSD（io1）卷上创建文件系统。将卷附加到所有EC2实例。 
+D.在附加到每个EC2实例的Amazon EBS卷上创建文件系统。在不同的EC2实例之间同步Amazon EBS卷。
+```
 
-QUESTION 162
+
+
+##### QUESTION 162
+
+```
 A company runs an application using Amazon ECS. The application creates resized versions of
 an original image and then makes Amazon S3 API calls to store the resized images in Amazon
 S3. How can a solutions architect ensure that the application has permission to access Amazon
@@ -6449,8 +7107,14 @@ launch configuration used by the ECS cluster.
 D. Create an IAM user with S3 permissions, and then relaunch the Amazon EC2 instances for the
 ECS cluster while logged in as this account.
 Answer: B
+一家公司使用Amazon ECS运行应用程序。该应用程序创建原始图像的调整大小版本，然后进行Amazon S3 API调用以将调整大小的图像存储在Amazon S3中。解决方案架构师如何确保应用程序有权访问Amazon S3？ A.更新AWS IAM中的S3角色以允许从Amazon ECS进行读/写访问，然后重新启动该容器。 B.创建一个具有S3权限的IAM角色，然后在任务定义中将该角色指定为taskRoleArn。 C.创建一个安全组，该安全组允许从Amazon ECS到Amazon S3的访问，并更新ECS集群使用的启动配置。 D.创建具有S3权限的IAM用户，然后以该帐户身份登录时重新启动ECS集群的Amazon EC2实例。
+```
 
-QUESTION 163
+
+
+##### QUESTION 163
+
+```
 A solutions architect has configured the following IAM policy.
 1
 "Vereicn": "2012-10-17",
@@ -6473,13 +7137,17 @@ l,
 )
 Which action will be allowed by the policy?
 A. An AWS Lambda function can be deleted from any network.
-
 B. An AWS Lambda function can be created from any network.
 C. An AWS Lambda function can be deleted from the 100.220.0.0/20 network.
 D. An AWS Lambda function can be deleted from the 220.100.16.0/20 network
 Answer: C
+```
 
-QUESTION 164
+
+
+##### QUESTION 164
+
+```
 A website runs a web application that receives a burst of traffic each day at noon. The users
 upload new pictures and content daily, but have been complaining of timeouts. The architecture
 uses Amazon EC2 Auto Scaling groups, and the custom application consistently takes 1 minute
@@ -6490,10 +7158,23 @@ B. Configure AWS ElastiCache for Redis to offload direct requests to the servers
 C. Configure an Auto Scaling step scaling policy with an instance warmup condition.
 D. Configure Amazon CloudFront to use an Application Load Balancer as the origin.
 Answer: C
+一个网站运行一个Web应用程序，该应用程序每天中午都会收到大量流量。用户每天上传新图片和新内容，但一直抱怨超时。
+该架构使用Amazon EC2 Auto Scaling组，并且自定义应用程序始终在启动时花费1分钟在响应用户请求之前启动。解决方案架构师应如何重新设计架构，以更好地响应不断变化的流量？ 
+A.使用慢启动配置配置网络负载平衡器，B。配置Redis的AWS ElastiCache将直接请求卸载到服务器。 
+C.使用实例预热条件配置Auto Scaling步骤扩展策略。 D.将Amazon CloudFront配置为使用应用程序负载均衡器作为源
+```
+
+
 
 If you are creating a step policy, you can specify the number of seconds that it takes for a newly launched instance to warm up. Until its specified warm-up time has expired, an instance is not counted toward the aggregated metrics of the Auto Scaling group.
 
-QUESTION 165
+如果要创建步骤策略，则可以指定新启动的实例进行预热所用的秒数。 在指定的预热时间到期之前，不会将实例计入Auto Scaling组的聚合指标。
+
+C在自动缩放中添加了预热条件。
+
+##### QUESTION 165
+
+```
 A company has a website running on Amazon EC2 instances across two Availability Zones, The
 company is expecting spikes in traffic on specific holidays, and wants to provide a consistent user
 experience. How can a solutions architect meet this requirement?
@@ -6502,9 +7183,18 @@ g B. Use simple scaling.
 C
 Use lifecycle hooks.
 D. Use scheduled scaling,
-Answer: C
+Answer: D
 
-QUESTION 166
+一家公司在两个可用区上的Amazon EC2实例上运行着一个网站，该公司预计特定假期的流量会激增，并希望提供一致的用户体验。解决方案架构师如何满足此要求？答：使用逐步缩放。 g B.使用简单缩放。 C使用生命周期挂钩。 D.使用预定的缩放
+
+
+```
+
+
+
+##### QUESTION 166
+
+```
 A company's web application is running on Amazon EC2 instances behind an Application Load
 Balancer. The company recently changed its policy, which ñow requires the application to be
 accessed from one specific country only.
@@ -6513,23 +7203,36 @@ A. Configure the security group for the EC2 instances.
 B. Configure the security group on the Application Load Balancer.
 C. Configure AWS WAF on the Application Load Balancer in a VPC.
 D. Configure the network ACL for the subnet that contains the EC2 instances.
+公司的Web应用程序在Application Load Balancer后面的Amazon EC2实例上运行。
+该公司最近更改了政策，现在只需要从一个特定国家/地区访问该应用程序即可。哪种配置可以满足此要求？ 
+A.为EC2实例配置安全组。 B.在应用程序负载平衡器上配置安全组。 C.在VPC中的Application Load Balancer上配置AWS WAF。 D.为包含EC2实例的子网配置网络ACL
 Answer: C
+```
 
 
 
-QUESTION 167
+##### QUESTION 167
+
+```
 A company has 150 TB of archived image data stored on-premises that needs to be mowed to
 the AWS Cloud within the next month. The company's current network connection allows up to
 100 Mbps uploads for this purpose during the night only.
-
 What is the MOST cost-effective mechanism to move this data and meet the migration deadline?
 A. Use AWS Snowmobile to ship the data to AWS.
 B. Order multiple AWS Snowball devices to ship the data to AWS.
 C. Enable Amazon S3 Transfer Acceleration and securely upload the data.
 D. Create an Amazon S3 VPC endpoint and establish a VPN to upload the data.
 Answer: B
+一家公司在本地存储了150 TB的存档图像数据，需要在下个月内将其修剪到AWS云中。该公司当前的网络连接仅在夜间允许最多100 Mbps的上传。 什么是最有成本效益的机制来移动此数据并在迁移截止日期之前完成？ A.使用AWS Snowmobile将数据运送到AWS。 B.订购多个AWS Snowball设备以将数据发送到AWS。 C.启用Amazon S3 Transfer Acceleration并安全地上传数据。 D.创建一个Amazon S3 VPC终端节点并建立一个VPN以上传数据。
+```
 
-QUESTION 168
+几个雪球设备（80 TB）应该能够轻松移动150 TB。因此答案应该是B。
+
+
+
+##### QUESTION 168
+
+```
 A three-tier web application processes orders from customers. The web tier consists of Amazon
 EC2 instances behind an Application Load Balancer, a middle tier of three EC2 instances
 decoupled from the web tier using Amazon SQS. and an Amazon DynamoDB backend. At peak
@@ -6542,23 +7245,46 @@ C. Add an Amazon CloudFront distribution to cache the responses for the web tier
 D. Use Amazon EC2 Auto Scaling to scale out the middle tier instances based on the SOS queue
 depth.
 Answer: D
+三层Web应用程序处理来自客户的订单。 Web层由位于Application Load Balancer后面的Amazon EC2实例组成，这是一个三个EC2实例的中间层，使用Amazon SQS与Web层分离。
+和一个Amazon DynamoDB后端。在高峰时段，由于处理时间很长，使用该网站提交订单的客户必须比正常等待更长的时间才能收到确认。
+解决方案架构师需要减少这些处理时间。哪种行动最有效地做到这一点？ 
+A.用Amazon Kinesis Data Firehose替换SQS队列。 B.在DynamoDB后端层前面使用Amazon ElastiCache for Redis。 
+C.添加Amazon CloudFront发行版以缓存Web层的响应，D.使用Amazon EC2 Auto Scaling根据SOS队列深度扩展中间层实例
+```
+
+为了解决“冗长的处理时间”，添加更多EC2实例。
 
 
 
-QUESTION 169
-A company wants to host a web application on AWS that will communicate to a database within a
-VPC.
-The application should be highly available.
-What should a solutions architect recommend?
-A. Create two Amazon EC2 instances to host the web servers behind a load balancer, and then
-deploy the database on a large instance.
-B. Deploy a load balancer in multiple Availability Zones with an Auto Scaling group for the web
-servers, and then deploy Amazon RDS in multiple Availability Zones.
-C. Deploy a load balancer in the public subnet with an Auto Scaling group for the web servers, and
-then deploy the database on an Amazon EC2 instance in the private subnet.
-D. Deploy two web servers with an Auto Scaling group, configure a domain that points to the two
-web servers, and then deploy a database architecture in multiple Availability Zones.
-Answer: B
+##### QUESTION 169
+
+> A company wants to host a web application on AWS that will communicate to a database within a
+> VPC.
+> The application should be highly available.
+> What should a solutions architect recommend?
+> A. Create two Amazon EC2 instances to host the web servers behind a load balancer, and then
+> deploy the database on a large instance.
+> B. Deploy a load balancer in multiple Availability Zones with an Auto Scaling group for the web
+> servers, and then deploy Amazon RDS in multiple Availability Zones.
+> C. Deploy a load balancer in the public subnet with an Auto Scaling group for the web servers, and
+> then deploy the database on an Amazon EC2 instance in the private subnet.
+> D. Deploy two web servers with an Auto Scaling group, configure a domain that points to the two
+> web servers, and then deploy a database architecture in multiple Availability Zones.
+> Answer: B
+>
+> 一家公司希望在AWS上托管一个Web应用程序，该应用程序将与VPC中的数据库进行通信。该应用程序应具有很高的可用性。
+>
+> 解决方案架构师应该建议什么？
+>
+>  A.创建两个Amazon EC2实例以在负载均衡器后面托管Web服务器，然后在大型实例上部署数据库。 
+>
+> B.在具有多个Web服务器的Auto Scaling组的多个可用区中部署负载均衡器，然后在多个可用区中部署Amazon RDS。
+>
+>  C.在具有用于Web服务器的Auto Scaling组的公共子网中部署负载均衡器，然后在专用子网中的Amazon EC2实例上部署数据库。
+>
+>  D.部署具有Auto Scaling组的两个Web服务器，配置指向两个Web服务器的域，然后在多个可用区中部署数据库体系结构
+
+
 
 QUESTION 170
 A company is migrating to the AWS Cloud, A file server is the first workload to migrate. Users
