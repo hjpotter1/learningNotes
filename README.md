@@ -1,2 +1,2 @@
-# gitgit
-1231321qweweqweqeqwe
+# 学习用笔记
+包括aws 应用情报等
