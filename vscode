@@ -52,3 +52,46 @@ Command+Shift+Control+4 截取选定内容到剪贴板
 
 工具
 快捷键工具 CheatSheet 按住Command调出菜单
+
+
+###vim
+
+新建标签：command + t
+
+关闭标签：command + w
+
+切换标签：command + 数字 command + 左右方向键
+
+切换全屏：command + enter
+
+查找：command + f
+
+垂直分屏：command + d
+
+水平分屏：command + shift + d
+
+切换屏幕：command + option + 方向键 command + [ 或 command + ]
+
+查看历史命令：command + ;
+
+查看剪贴板历史：command + shift + h
+
+到行首：ctrl + a(区别与vim)
+
+到行尾：ctrl + e(区别与vim)
+
+Mac 上使用vim 快捷键：
+
+i 进入编辑模式
+
+esc 退出编辑模式，进去命令模式
+
+:q 未对文件做修改时退出
+
+:q! 对文件做了修改，不保存退出
+
+:wq 保存更改退出
+
+0 行首(命令模式下按0)；
+
+dd 删除某一行，连续两次dd 作者：小屁民斌 https://www.bilibili.com/read/cv24267050/ 出处：bilibili
