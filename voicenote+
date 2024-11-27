@@ -24,3 +24,8 @@ npm install -g vsce
 https://github.com/crazy-luke/markdownexample
 https://github.com/Ninglo/hello-world
 #vscodeApi 我想要实现一个 VSCode 快速笔记插件，具体来说有两个子能力。1. 创建笔记文件 2. 在 Editor 中打开它。
+
+It's live!
+Your extension is now visible on the Marketplace (see it) and can be discovered and installed from every Azure DevOps organization.
+
+Made a mistake? How to unpublish
