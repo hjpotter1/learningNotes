@@ -47,7 +47,7 @@ lightgallery: true
 - JavaScript / TypeScript + React、Vue.js などのモダンなフレームワークの活用
 - Java 、Python 、C#によるWebアプリケーションの開発・設計
 - 保険、ECサイト、精算システム、旅行関連などの様々な案件の経験
-- UT を基本とした保守性と再利用性を意識したコーディング
+- UT を基本とした保守性と再利用性を意識したコーディング 
 
 ---
 
