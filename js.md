@@ -6,7 +6,7 @@
 ```javascript
 const value = someVariable || '默认值';
 ```
-如果`someVariable`是假值（如`undefined`、`null`、`''`、`0`、`NaN`或`false`），则使用右侧的默认值。
+如果`someVariable`是假值（如`undefined`、`null`、`''`、`0`、`NaN`或`false`），则使用右侧的默认值
 
 **?? 运算符（空值合并）**:
 ```javascript
