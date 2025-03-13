@@ -1,0 +1,85 @@
+mockImplementation vs mockResolvedValue 以及其他常用模拟方法
+mockImplementation
+mockImplementation 用于完全替换函数的实现。当你需要定义复杂的模拟行为或模拟函数的内部逻辑时非常有用。
+javascriptCopyconst mockFunction = vi.fn().mockImplementation((arg1, arg2) => {
+  if (arg1 > arg2) {
+    return 'Greater';
+  } else {
+    return 'Less or Equal';
+  }
+});
+
+// 或者用于异步函数
+mockFunction.mockImplementation(async () => {
+  await someAsyncOperation();
+  return 'Result';
+});
+mockResolvedValue
+mockResolvedValue 专门用于模拟返回 Promise 的函数，是一种简写形式。它会创建一个返回已解析 Promise 的模拟函数。
+javascriptCopy// 等价于 mockImplementation(() => Promise.resolve('Success'))
+const mockFunction = vi.fn().mockResolvedValue('Success');
+
+await mockFunction(); // 返回 'Success'
+其他常用模拟方法
+mockReturnValue
+为同步函数设置返回值：
+javascriptCopyconst mockFunction = vi.fn().mockReturnValue('Default value');
+mockRejectedValue
+模拟 Promise 拒绝：
+javascriptCopyconst mockFunction = vi.fn().mockRejectedValue(new Error('Async error'));
+mockReturnValueOnce / mockResolvedValueOnce / mockRejectedValueOnce
+设置函数在特定调用次数时的返回值：
+javascriptCopyconst mockFunction = vi.fn()
+  .mockReturnValueOnce('First call')
+  .mockReturnValueOnce('Second call')
+  .mockReturnValue('Default');
+
+mockFunction(); // 'First call'
+mockFunction(); // 'Second call'
+mockFunction(); // 'Default'
+javascriptCopyconst mockAsyncFunction = vi.fn()
+  .mockResolvedValueOnce('First result')
+  .mockRejectedValueOnce(new Error('Second call fails'))
+  .mockResolvedValue('Default result');
+mockClear / mockReset / mockRestore
+重置模拟函数的状态：
+
+mockClear(): 清除调用历史记录（如调用次数和参数）
+mockReset(): 清除历史记录并删除任何模拟实现
+mockRestore(): 完全还原原始实现（仅适用于 spyOn 创建的模拟）
+
+spyOn
+监视对象上的方法调用，可以选择替换其实现：
+javascriptCopyvi.spyOn(console, 'log').mockImplementation(() => {});
+
+// 或用于类方法
+vi.spyOn(SomeClass.prototype, 'method').mockImplementation(() => 'Mocked');
+常见模拟模式
+根据参数返回不同值
+javascriptCopymockFunction.mockImplementation((arg) => {
+  if (arg === 'special') return 'Special case';
+  return 'Normal case';
+});
+模拟链式调用
+javascriptCopyconst mockChain = {
+  method1: vi.fn().mockReturnThis(),
+  method2: vi.fn().mockReturnThis(),
+  value: vi.fn().mockReturnValue('result')
+};
+
+// 允许: mockChain.method1().method2().value()
+模拟异步流程
+javascriptCopy// 模拟异步操作序列
+const mockAsyncOperation = vi.fn()
+  .mockImplementationOnce(async () => {
+    await delay(100);
+    return { status: 'pending' };
+  })
+  .mockImplementationOnce(async () => {
+    await delay(100);
+    return { status: 'processing' };
+  })
+  .mockImplementationOnce(async () => {
+    await delay(100);
+    return { status: 'completed' };
+  });
