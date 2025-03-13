@@ -1,3 +1,119 @@
+模拟(Mock)技巧
+
+模拟顺序很重要：
+
+变量定义应该在vi.mock()调用之前，避免"Cannot access X before initialization"错误
+对于复杂情况，可以使用变量声明在前，然后在setup或beforeEach中设置具体值
+
+
+模拟外部依赖：
+
+直接导入模块并使用vi.spyOn来模拟其方法：
+javascriptCopyimport * as useIsLogin from '../../../base/composables/utils/useIsLogin';
+vi.spyOn(useIsLogin, 'default').mockImplementation(async () => isLogin);
+
+对于完全模拟的模块，使用vi.mock：
+javascriptCopyvi.mock('../../../../../B2C/composables/inquiry/useCreateContacts', () => ({...}));
+
+
+
+状态追踪变量：
+
+使用对象引用可以在测试中动态修改值：
+javascriptCopyconst mockIsSucceeded = { value: true }; // 不是 const mockIsSucceeded = true
+
+这样在测试中可以通过mockIsSucceeded.value = false修改，而不必重新模拟整个函数
+
+
+分离模拟声明和行为：
+
+在顶层声明模拟变量和基础行为
+在具体测试中根据需要覆盖特定行为
+
+
+
+测试组织结构
+
+使用setup函数：
+
+将通用初始化逻辑封装到setup函数中
+但特殊场景（如未登录测试）可能需要单独配置
+
+
+测试分组：
+
+使用describe按功能或场景分组测试
+嵌套describe用于进一步细分场景
+
+
+等待渲染完成：
+
+使用waitFor确保组件已完全渲染：
+javascriptCopyawait waitFor(() => {
+  expect(screen.getByText('お問合せ・質問')).toBeInTheDocument();
+});
+
+
+
+异步组件处理：
+
+使用Suspense包装异步组件：
+javascriptCopytemplate: `
+  <div>
+    <Suspense>
+      <InqMobile />
+    </Suspense>
+  </div>
+`,
+
+
+
+
+测试各种情况的技巧
+
+测试初始渲染：
+
+检查页面标题、输入表单等静态元素是否存在
+使用screen.getByText或screen.getByPlaceholderText等查询方法
+
+
+测试条件分支（如登录/未登录）：
+
+为不同条件创建不同测试分组
+根据需要调整模拟行为
+
+
+测试异步流程：
+
+模拟异步函数行为
+使用mockImplementation定义复杂行为
+确保使用await等待异步操作完成
+
+
+测试错误处理：
+
+使用mockRejectedValueOnce模拟失败情况
+模拟console.error捕获错误输出
+检查错误是否被正确处理
+
+
+测试导航行为：
+
+使用navigateToSpy监控导航调用
+验证导航参数，如路径和选项（{ external: true }）
+
+
+
+避免常见错误
+
+路径错误：确保导入路径正确，尤其是在不同层级的测试文件中
+提升(hoisting)问题：了解vi.mock被提升到文件顶部的特性，避免引用未初始化变量
+异步渲染问题：使用Suspense处理异步组件，避免渲染错误
+模拟顺序问题：确保清除/重置模拟，避免测试间互相影响
+类型问题：适当使用TypeScript类型注解，如let navigateToSpy: any;
+
+
+
 mockImplementation vs mockResolvedValue 以及其他常用模拟方法
 mockImplementation
 mockImplementation 用于完全替换函数的实现。当你需要定义复杂的模拟行为或模拟函数的内部逻辑时非常有用。
