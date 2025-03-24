@@ -162,3 +162,15 @@ user-scalable	是否允许用户进行缩放，值为"no"或"yes", no 代表不�
 		<div id="box2"></div>
 </body>
 </html>
+
+
+标签页指示器
+在一个标签页组件中，我们可能想要为活跃的标签添加一个向下的三角形指示器，就像这样：
+htmlコピー<button class="bg-[#48a9ff] text-white rounded-lg py-3 px-4 relative">
+  标签文本
+  <div class="w-0 h-0 absolute -bottom-2 left-1/2 transform -translate-x-1/2 border-l-[10px] border-r-[10px] border-t-[10px] border-l-transparent border-r-transparent border-t-[#48a9ff]"></div>
+</button>
+这里的关键CSS属性包括：
+
+absolute -bottom-2 left-1/2 transform -translate-x-1/2：这些定位属性将三角形放置在按钮底部中央
+border-t-[#48a9ff]：确保三角形的颜色与按钮背景色相匹配
