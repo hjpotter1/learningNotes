@@ -174,3 +174,92 @@ htmlコピー<button class="bg-[#48a9ff] text-white rounded-lg py-3 px-4 relativ
 
 absolute -bottom-2 left-1/2 transform -translate-x-1/2：这些定位属性将三角形放置在按钮底部中央
 border-t-[#48a9ff]：确保三角形的颜色与按钮背景色相匹配
+
+# Flex-wrap vs Grid 布局比较
+
+## Flex-wrap
+
+### 优点
+- 更灵活的一维布局方案
+- 容易实现自动换行和动态空间分配
+- 适合处理不定数量的元素
+- 对内容尺寸变化响应更自然
+- 实现水平/垂直居中较简单
+
+### 缺点
+- 不擅长处理复杂的二维布局
+- 在某些特定布局场景下需要更多的嵌套
+- 行与行之间的对齐可能需要额外处理
+
+### 常用属性
+```css
+.flex-container {
+  display: flex;
+  flex-wrap: wrap | nowrap | wrap-reverse;
+  gap: <length>;
+  justify-content: center | flex-start | flex-end | space-between | space-around;
+  align-items: center | flex-start | flex-end | stretch;
+}
+```
+
+### 适用场景
+- 导航栏
+- 标签列表
+- 自适应卡片列表
+- 需要自动换行的按钮组
+- 一维方向的布局需求
+
+## Grid
+
+### 优点
+- 强大的二维布局能力
+- 更精确的网格控制
+- 可以同时控制行和列
+- 支持区域命名和模板
+- 适合复杂的响应式布局
+
+### 缺点
+- 对动态内容的适应性较差
+- 配置相对复杂
+- 学习曲线较陡
+- IE浏览器支持有限
+
+### 常用属性
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  gap: <length>;
+  grid-auto-flow: row | column;
+}
+```
+
+### 适用场景
+- 整页布局
+- 图片画廊
+- 数据表格
+- 仪表盘
+- 需要精确对齐的复杂布局
+
+## 选择建议
+
+1. 使用 Flex-wrap 当：
+   - 布局主要是一维的（行或列）
+   - 需要处理不确定数量的元素
+   - 需要简单的自适应换行
+   - 元素大小可能动态变化
+
+2. 使用 Grid 当：
+   - 需要二维布局控制
+   - 布局结构相对固定
+   - 需要精确的位置控制
+   - 需要处理复杂的响应式布局
+
+3. 混合使用：
+   - 可以在 Grid 布局内部使用 Flex 处理单个网格项
+   - 根据不同的布局需求选择合适的方案
+   - 利用两者的优势创建更灵活的布局
+
+在实际项目中，这两种布局方式经常会结合使用，以达到最佳的布局效果。比如在你的按钮布局案例中，选择 Flex-wrap 是因为它更适合处理自适应的一维按钮组布局。
+						  
