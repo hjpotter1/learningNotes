@@ -1,4 +1,4 @@
-## 1. **relative (相对定位)**
+# 1. **relative (相对定位)**
 
 ```
 html
@@ -182,4 +182,70 @@ html
    - 利用两者的优势创建更灵活的布局
 
 在实际项目中，这两种布局方式经常会结合使用，以达到最佳的布局效果。比如在你的按钮布局案例中，选择 Flex-wrap 是因为它更适合处理自适应的一维按钮组布局。
-						  
+
+# Tailwind CSS 中的 `flex`、`flex-1`、`mx-auto`、`self-stretch` 用法总结
+
+### 🔹 `flex`
+将元素设置为弹性容器，**作用于子元素的排列方式**。
+
+```html
+<div class="flex size-5 items-center justify-center">
+  <span>内容</span>
+</div>
+```
+
+- `flex`：将当前元素变为 Flex 容器
+- `items-center`：让子元素在垂直方向居中
+- `justify-center`：让子元素在水平方向居中
+
+### 🔹 `flex-1`
+让当前元素占据父元素的剩余空间（相当于 `flex-grow: 1`）。
+
+```html
+<div class="flex">
+  <div class="w-20 bg-gray-200">左边</div>
+  <div class="flex-1 bg-blue-200">右边自适应</div>
+</div>
+```
+
+## 🔹 `mx-auto`
+设置 `margin-left` 和 `margin-right` 为 `auto`，使元素水平居中。
+
+```html
+<div class="max-w-md mx-auto bg-gray-100 p-4">
+  <p>我会居中显示</p>
+</div>
+```
+
+💡 **注意**：父元素必须限制了宽度（如 `max-w-md`），否则无法居中。
+
+### 🔹 `self-stretch`
+将元素在交叉轴方向拉伸（默认为纵向），需配合 Flex 使用。
+
+```html
+<div class="flex items-start gap-4">
+  <div class="bg-red-200">固定高度</div>
+  <div class="self-stretch bg-green-200">我会拉伸</div>
+</div>
+```
+
+### 🔹 `w-full` 与 `self-stretch` 的区别
+
+- `w-full`：设置元素宽度为其父元素的 100%
+- `self-stretch`：在 Flex 中让元素在纵向拉伸填满空间
+
+```html
+<!-- w-full 用于宽度 -->
+<div class="w-full bg-yellow-200">宽度 100%</div>
+
+<!-- self-stretch 用于高度 -->
+<div class="flex items-start gap-4">
+  <div class="bg-red-200">固定高度</div>
+  <div class="self-stretch bg-green-200">纵向拉伸</div>
+</div>
+```
+
+### 自适应布局：
+
+左右两端对齐：flex justify-between
+中间元素自适应扩展：flex-1
