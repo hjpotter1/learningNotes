@@ -250,3 +250,116 @@ html
 
 左右两端对齐：flex justify-between
 中间元素自适应扩展：flex-1
+
+
+# Flexbox 高度控制优化技术总结
+
+## 问题与解决
+
+**问题**：父容器 `h-[560px]`，左右子组件高度不一致，右侧溢出
+- **右侧**：examHeader `max-h-[44px]` + subjectContainer `h-[494px]` ≈ 562px > 560px
+- **左侧**：多个固定高度元素 + 中间区域 `h-auto`，总高度不可控
+
+## 核心技术模式
+
+### 1. 容器级高度控制
+```vue
+<!-- 父容器：统一控制总高度 -->
+<div class="flex h-[560px] gap-6">
+  <!-- 左侧：55%宽度，垂直布局 -->
+  <div class="flex w-[55%] flex-col">
+    <!-- 左侧内容结构 -->
+  </div>
+  
+  <!-- 右侧：45%宽度，完全填充 -->
+  <div class="flex h-full w-[45%]">
+    <TopExam class="h-full w-full" />
+  </div>
+</div>
+```
+
+### 2. 左侧自适应布局策略
+```vue
+<div class="flex w-[55%] flex-col">
+  <!-- 固定区域1：学習状況标题 -->
+  <div class="flex-shrink-0 border-b pb-2">学習状況</div>
+  
+  <!-- 自适应区域：主内容（核心可变部分） -->
+  <div class="flex-1 mx-2 my-4 flex flex-col bg-bg-yellow rounded-lg p-4">
+    <!-- 内部固定：連続学習日数 -->
+    <div class="flex-shrink-0">连续学习天数</div>
+    <div class="border-dashed border-t my-3"></div>
+    
+    <!-- 内部自适应：今週の学習状況 -->
+    <div class="flex-1 min-h-[126px] flex flex-col justify-center">
+      <WeeklyProgressSummary />
+    </div>
+    
+    <div class="border-dashed border-t my-3"></div>
+    <!-- 内部固定：学習ボタン -->
+    <div class="flex-shrink-0 h-[62px] flex items-center justify-center">
+      <ButtonToSubject />
+    </div>
+  </div>
+  
+  <!-- 固定区域2：進捗标题 -->
+  <div class="flex-shrink-0 border-b pb-2 mb-3">全体の学習進捗</div>
+  
+  <!-- 固定区域3：進捗内容 -->
+  <div class="flex-shrink-0 h-[100px] bg-bg-light-gray rounded-lg p-4">
+    <TopProgress />
+  </div>
+</div>
+```
+
+### 3. 右侧固定结构优化
+```typescript
+// TopExam.vue 样式配置
+const style = {
+  wide: {
+    // 容器：完全适应父容器高度
+    container: 'flex w-full h-full flex-col rounded-lg overflow-hidden',
+    
+    // 固定头部：精确控制高度，防止压缩
+    examHeader: 'w-full h-[44px] flex-shrink-0 px-3 py-1.5 bg-gradient-to-l ...',
+    
+    // 内容区域：自动填充剩余空间，处理溢出
+    subjectContainer: 'w-full flex-1 overflow-y-auto px-2 py-3 ...',
+  }
+}
+```
+
+## 关键技术要点
+
+### 1. 双层嵌套 flex-1 模式
+```vue
+<!-- 外层：左侧整体自适应 -->
+<div class="flex-1 flex flex-col bg-bg-yellow">
+  <div class="flex-shrink-0">固定内容</div>
+  <!-- 内层：WeeklyProgressSummary 自适应 -->
+  <div class="flex-1 min-h-[126px]">可变内容</div>
+  <div class="flex-shrink-0">固定内容</div>
+</div>
+```
+
+### 2. 响应式约束
+- **最小宽度**：`min-w-[480px]` 防止左侧过度压缩
+- **最大宽度**：`max-w-[580px]` 控制左侧最大宽度
+- **最小高度**：`min-h-[126px]` 保证核心内容可读性
+
+### 3. 关键属性组合
+| 用途 | 属性组合 | 说明 |
+|------|---------|------|
+| 固定区域 | `flex-shrink-0` + `h-[Npx]` | 防压缩 + 精确高度 |
+| 自适应区域 | `flex-1` + `min-h-[Npx]` | 填充剩余 + 最小高度保护 |
+| 容器继承 | `h-full` | 完全适应父容器高度 |
+| 溢出处理 | `overflow-y-auto` | 内容超长时滚动 |
+
+## 最佳实践
+
+1. **统一高度管理**：父容器固定总高度，子容器用 `h-full` 适应
+2. **分层自适应**：外层控制大区域分配，内层控制细节自适应  
+3. **保护关键UI**：用 `flex-shrink-0` 保护标题、按钮等关键元素
+4. **预留弹性空间**：核心内容区域用 `flex-1` + `min-h-[Npx]` 既能自适应又有最小保护
+
+**核心公式**：`固定容器高度` + `左右分别使用 flex 垂直布局` + `关键区域 flex-1 自适应` = 完美等高布局
